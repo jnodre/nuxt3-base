@@ -1,0 +1,127 @@
+@mixin u-text-xl6 {
+  font-size: 100px;
+  line-height: 120px;
+  @media (--desktop) {
+    font-size: 85px;
+    line-height: 95px;
+  }
+  @media (--tablet) {
+    font-size: 66px;
+    line-height: 76px;
+  }
+  @media (--mobile) {
+  }
+}
+@mixin u-text-xl5 {
+  font-size: 85px;
+  line-height: 95px;
+  @media (--desktop) {
+    font-size: 62px;
+    line-height: 75px;
+  }
+  @media (--tablet) {
+    font-size: 50px;
+    line-height: 62px;
+  }
+  @media (--mobile) {
+  }
+}
+@mixin u-text-xl4 {
+  font-size: 62px;
+  line-height: 75px;
+  @media (--desktop) {
+    font-size: 50px;
+    line-height: 62px;
+  }
+  @media (--tablet) {
+    font-size: 40px;
+    line-height: 55px;
+  }
+  @media (--mobile) {
+  }
+}
+@mixin u-text-xl3 {
+  font-size: 50px;
+  line-height: 62px;
+  @media (--desktop) {
+    font-size: 40px;
+    line-height: 55px;
+  }
+  @media (--tablet) {
+    font-size: 30px;
+    line-height: 42px;
+  }
+  @media (--mobile) {
+  }
+}
+@mixin u-text-xl2 {
+  font-size: 40px;
+  line-height: 55px;
+  @media (--desktop) {
+    font-size: 30px;
+    line-height: 48px;
+  }
+  @media (--tablet) {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  @media (--mobile) {
+  }
+}
+@mixin u-text-xl {
+  font-size: 30px;
+  line-height: 48px;
+  @media (--desktop) {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  @media (--tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  @media (--mobile) {
+  }
+}
+@mixin u-text-l {
+  font-size: 25px;
+  line-height: 35px;
+  @media (--desktop) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  @media (--tablet) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  @media (--mobile) {
+  }
+}
+@mixin u-text-base {
+  font-size: 20px;
+  line-height: 30px;
+  @media (--desktop) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  @media (--tablet) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  @media (--mobile) {
+  }
+}
+
+@mixin u-text-sm {
+  font-size: 16px;
+  line-height: 22px;
+  @media (--desktop) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  @media (--tablet) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  @media (--mobile) {
+  }
+}

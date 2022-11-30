@@ -1,10 +1,9 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 function per(target: number, context: number) {
   return (target / context) * 100 + "vw";
 }
 
 export default defineNuxtConfig({
-  components: true,
+  css: ["@/assets/style/imports.scss"],
   postcss: {
     plugins: {
       autoprefixer: {},
