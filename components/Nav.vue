@@ -1,14 +1,14 @@
 <template>
-  <Header class="header">
+  <header class="header">
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__element nav__element--center">
           <nuxt-link to="" aria-label="Enlace a la home"
-            ><img class="nav__logo" src="https://dummyimage.com/100.gif" alt=""
+            ><img class="nav__logo" src="/images/logo.png" alt=""
           /></nuxt-link>
         </li>
         <li class="nav__element nav__element--right">
-          <a class="nav__logo" href="">Agenda una llamada</a>
+          <a class="nav__link" href="">Agenda una llamada</a>
         </li>
         <li class="nav__element nav__element--right">
           <button
@@ -18,7 +18,11 @@
             aria-controls="modal-search"
             aria-expanded="false"
           >
-            <img src="https://dummyimage.com/100.gif" alt="Buscar" />
+            <img
+              class="nav__search-icon"
+              src="~/assets/svg/search.svg"
+              alt="Buscar"
+            />
           </button>
         </li>
         <li class="nav__element nav__element--right">
@@ -28,17 +32,31 @@
             aria-expanded="false"
             @click="toggleMenu"
           >
-            Menú
+            <span v-if="menuOn || searchOn"> Cerrar </span>
+            <span v-else> Menú </span>
             <img
-              aria-hidden="true"
-              src="https://dummyimage.com/100.gif"
-              alt="Menú"
+              v-if="menuOn || searchOn"
+              src="~/assets/svg/close.svg"
+              alt="Cerrar"
+              class="nav__close"
             />
+            <svg
+              v-else
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 30 20"
+              class="nav__burger"
+            >
+              <g fill="#2b2a29" data-name="menu icon">
+                <path d="M0 20h26l4-4H4Z" />
+                <path d="M0 12h26l4-4H4Z" />
+                <path d="M0 4h26l4-4H4Z" />
+              </g>
+            </svg>
           </button>
         </li>
       </ul>
     </nav>
-  </Header>
+  </header>
   <nav
     class="modal-menu"
     id="modal-menu"
@@ -46,50 +64,78 @@
   >
     <ul class="modal-menu__list">
       <li class="modal-menu__element">
-        <nuxt-link to="/servicios/">Servicio</nuxt-link>
+        <nuxt-link to="/servicios/"
+          ><span class="modal-menu__text-wrapper">Servicio</span></nuxt-link
+        >
 
         <ul class="modal-menu__sub-list">
           <li class="modal-menu__sub-element">
-            <nuxt-link to="/servicios/investigacion-analisis-publico"
+            <nuxt-link
+              class="modal-menu__sub-link"
+              to="/servicios/investigacion-analisis-publico"
               >Investigación y análisis del público</nuxt-link
             >
           </li>
           <li class="modal-menu__sub-element">
-            <nuxt-link to="/servicios/marketing-relacional"
+            <nuxt-link
+              class="modal-menu__sub-link"
+              to="/servicios/marketing-relacional"
               >Marketing relacional</nuxt-link
             >
           </li>
           <li class="modal-menu__sub-element">
-            <nuxt-link to="/servicios/planes-gestion-publicos"
+            <nuxt-link
+              class="modal-menu__sub-link"
+              to="/servicios/planes-gestion-publicos"
               >Planes de gestión de públicos</nuxt-link
             >
           </li>
           <li class="modal-menu__sub-element">
-            <nuxt-link to="/servicios/experiencia-usuario"
+            <nuxt-link
+              class="modal-menu__sub-link"
+              to="/servicios/experiencia-usuario"
               >Experiencia del usuario</nuxt-link
             >
           </li>
           <li class="modal-menu__sub-element">
-            <nuxt-link to="/servicios/training-formacion"
+            <nuxt-link
+              class="modal-menu__sub-link"
+              to="/servicios/training-formacion"
               >Training y Formación</nuxt-link
             >
           </li>
         </ul>
       </li>
       <li class="modal-menu__element">
-        <nuxt-link to="/publicaciones">Publicaciones</nuxt-link>
+        <nuxt-link to="/publicaciones"
+          ><span class="modal-menu__text-wrapper"
+            >Publicaciones</span
+          ></nuxt-link
+        >
       </li>
       <li class="modal-menu__element">
-        <nuxt-link to="/blog">Blog</nuxt-link>
+        <nuxt-link to="/blog"
+          ><span class="modal-menu__text-wrapper">Blog</span></nuxt-link
+        >
       </li>
       <li class="modal-menu__element">
-        <nuxt-link to="/sobre-asimetrica">Sobre Asimétrica</nuxt-link>
+        <nuxt-link to="/sobre-asimetrica"
+          ><span class="modal-menu__text-wrapper"
+            >Sobre Asimétrica</span
+          ></nuxt-link
+        >
       </li>
       <li class="modal-menu__element">
-        <nuxt-link to="/contacto">Agenda una llamada / Contacto</nuxt-link>
+        <nuxt-link to="/contacto"
+          ><span class="modal-menu__text-wrapper"
+            >Agenda una llamada / Contacto</span
+          ></nuxt-link
+        >
       </li>
       <li class="modal-menu__element">
-        <nuxt-link to="/newsletter">Newsletter</nuxt-link>
+        <nuxt-link to="/newsletter"
+          ><span class="modal-menu__text-wrapper">Newsletter</span></nuxt-link
+        >
       </li>
     </ul>
   </nav>

@@ -4,15 +4,54 @@
   top: 0;
   z-index: 20;
   background: var(--white);
+  padding: 25px 0 15px;
 }
+
 .nav {
   width: 1015px;
   margin-left: auto;
   padding-right: per(50, 1920);
+
+  &__link {
+    position: relative;
+
+    &:after {
+      height: 4px;
+      width: 30px;
+      content: "";
+      background: var(--pink);
+      position: absolute;
+      transform: skew(-45deg, 0);
+      top: calc(100% + 9px);
+      right: 0;
+      transition: 0.4s ease-in;
+    }
+
+    &:before {
+      height: 4px;
+      width: 30px;
+      content: "";
+      background: var(--pink);
+      position: absolute;
+      transform: skew(-45deg, 0);
+      bottom: calc(100% + 9px);
+      left: 0;
+      transition: 0.4s ease-in;
+    }
+    &:hover {
+      &:before {
+        width: 100%;
+      }
+      &:after {
+        width: 100%;
+      }
+    }
+  }
   &__element {
     display: flex;
     place-items: center;
     place-content: center;
+
     @include u-text-base;
 
     &--right {
@@ -29,9 +68,37 @@
   }
   &__logo {
   }
+  &__burger,
+  &__close {
+    width: 30px;
+    path {
+      transition: 0.2s ease-in;
+    }
+  }
   &__menu {
+    display: flex;
+    gap: 12px;
+
+    &:hover {
+      text-decoration: underline;
+      .nav__burger {
+        path {
+          &:first-of-type {
+            transform: translateY(2px);
+          }
+          &:last-of-type {
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
   }
   &__search {
+    scale: 1;
+    transition: 0.2s ease-in;
+    &:hover {
+      scale: 1.1;
+    }
   }
 }
 
@@ -51,6 +118,14 @@
   &--active {
     transform: translateY(0);
   }
+  &__text-wrapper {
+    display: block;
+    &:hover {
+      transition: 0.2s ease-in-out;
+      text-decoration: underline;
+      transform: translateX(10px);
+    }
+  }
   &__element {
     @include u-text-xl3;
 
@@ -66,8 +141,32 @@
     row-gap: 50px;
     width: 1680px;
   }
+  &__sub-link {
+    transform: translateX(20px);
+  }
   &__sub-element {
+    display: flex;
+    place-items: center;
+    position: relative;
+    &:before {
+      height: 30px;
+      width: 4px;
+      content: "";
+      background: url(~/assets/svg/rectangle.svg);
+      position: absolute;
+    }
     @include u-text-xl;
+
+    &:hover {
+      .modal-menu__sub-link {
+        transition: 0.2s ease-in-out;
+        text-decoration: underline;
+        transform: translateX(30px);
+      }
+      &:before {
+        transform: rotate(15deg);
+      }
+    }
   }
   &__sub-list {
     margin-top: 20px;

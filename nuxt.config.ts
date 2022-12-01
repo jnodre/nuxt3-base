@@ -3,6 +3,7 @@ function per(target: number, context: number) {
 }
 
 export default defineNuxtConfig({
+  modules: ["@nuxt/image-edge"],
   css: ["@/assets/style/imports.scss"],
   postcss: {
     plugins: {

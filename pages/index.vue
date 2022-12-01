@@ -1,11 +1,13 @@
 <template>
-  <h1>hola mundo</h1>
+  <PageHeader
+    title="Te damos la bienvenida a
+    Asimétrica"
+    subtitle="Investigación, consultoría y formación
+    para el sector cultural"
+    :image="{ url: 'https://dummyimage.com/100.gif' }"
+  />
+  <DotSection
+    description="ASIMÉTRICA es un equipo de profesionales de la gestión cultural preparado para conocer y ampliar el público de las organizaciones culturales de forma sostenible."
+  />
+  <ServicesContainer />
 </template>
-<script>
-export default {};
-</script>
-<style>
-h1 {
-  width: per(900, 1920);
-}
-</style>
