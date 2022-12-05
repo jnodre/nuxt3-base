@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <h2>Servicios</h2>
+  <section class="services-container">
+    <h2 class="services-container__title">Servicios</h2>
     <ServiceArticle
       v-for="(service, i) in services"
       :key="`service-${i}`"
@@ -8,12 +8,25 @@
     />
   </section>
 </template>
-<script setup>
-const services = [
+<script setup lang="ts">
+const services: Object[] = [
   {
-    title: "Investigación de públicos",
-    subtitle:
-      "¿Cómo de importante es conocer al público en tu organización? Realizamos estudios cualitativos y cuantitativos del público al servicio de los objetivos y la misión de cada organización",
+    title: "Infvestigación de públicos",
+    d: "¿Cómo de importante es conocer al público en tu organización? Realizamos efstudios cualitativos y cuantitativos del público al servicio de los objetivos y la misión de cada organización",
+    listImage: {
+      fullUrlThumb: "https://dummyimage.com/200.jpg",
+    },
+  },
+  {
+    title: "Infvestigación de públicos",
+    d: "¿Cómo de importante es conocer al público en tu organización? Realizamos efstudios cualitativos y cuantitativos del público al servicio de los objetivos y la misión de cada organización",
+    listImage: {
+      fullUrlThumb: "https://dummyimage.com/200.jpg",
+    },
+  },
+  {
+    title: "Infvestigación de públicos",
+    d: "¿Cómo de importante es conocer al público en tu organización? Realizamos efstudios cualitativos y cuantitativos del público al servicio de los objetivos y la misión de cada organización",
     listImage: {
       fullUrlThumb: "https://dummyimage.com/200.jpg",
     },

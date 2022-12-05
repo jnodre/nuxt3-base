@@ -9,5 +9,8 @@
   <DotSection
     description="ASIMÉTRICA es un equipo de profesionales de la gestión cultural preparado para conocer y ampliar el público de las organizaciones culturales de forma sostenible."
   />
+
   <ServicesContainer />
+  <WorkUs />
+  <Testimonials />
 </template>
