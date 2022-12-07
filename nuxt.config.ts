@@ -1,20 +1,27 @@
 function per(target: number, context: number) {
-  return (target / context) * 100 + "vw";
+  return (target / context) * 100 + 'vw'
 }
 
 export default defineNuxtConfig({
-  css: ["@/assets/style/imports.scss"],
+  css: ['@/assets/style/imports.scss'],
   postcss: {
     plugins: {
       autoprefixer: {},
-      "postcss-nested": {},
-      "postcss-pxtorem": {},
-      "postcss-functions": {
+      'postcss-nested': {},
+      'postcss-pxtorem': {},
+      'postcss-functions': {
         functions: {
           per,
         },
       },
-      "postcss-preset-env": { stage: 1 },
+      'postcss-preset-env': { stage: 1 },
     },
   },
-});
+  typescript: {
+    typeCheck: {
+      eslint: {
+        files: './**/*.{ts,js,vue}',
+      },
+    },
+  },
+})

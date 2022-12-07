@@ -13,4 +13,20 @@
   <ServicesContainer />
   <WorkUs />
   <Testimonials />
+  <HistorySection
+    :elements="[
+      {
+        title: '1º Así comenzamos…',
+        description:
+          '<p>ASIMÉTRICA nace en Madrid en <strong>2010</strong> con la vocación de <strong>añadir valor</strong> a la relación entre artistas, organizaciones culturales y público. Investigación, consultoría y formación al servicio de las artes y la cultura.</p>',
+      },
+      {
+        title: '1º Así comenzamos…',
+        description:
+          '<p>ASIMÉTRICA nace en Madrid en <strong>2010</strong> con la vocación de <strong>añadir valor</strong> a la relación entre artistas, organizaciones culturales y público. Investigación, consultoría y formación al servicio de las artes y la cultura.</p>',
+      },
+    ]"
+  />
+  <Team title="Equipo" />
 </template>
+<script setup lang="ts"></script>

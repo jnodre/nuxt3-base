@@ -1,0 +1,62 @@
+.history-section {
+  display: flex;
+  flex-direction: column;
+  padding: 200px 0;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 80px;
+    @include u-text-xl5;
+  }
+  &__element {
+    display: flex;
+    place-items: center;
+    place-content: center;
+    gap: 120px;
+    margin-bottom: 100px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &:nth-of-type(odd) {
+      flex-direction: row-reverse;
+    }
+  }
+  &__element-title {
+    color: var(--purple);
+    font-weight: 600;
+    @include u-text-xl3;
+  }
+  &__element-description {
+    @include u-text-l;
+    p {
+      margin-bottom: 20px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__text {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__image {
+    width: 780px;
+  }
+  &__know-more {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    margin-top: 120px;
+  }
+  &__know-more-title {
+    margin-bottom: 24px;
+    color: var(--purple);
+    text-align: center;
+
+    @include u-text-xl3;
+  }
+}
