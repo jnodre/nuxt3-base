@@ -19,12 +19,19 @@
   width: max-content;
   transition: 0.3s ease-out;
 
+  @include u-text-l;
+
   &:hover {
     background: var(--pink);
     text-decoration: underline;
     color: var(--white);
   }
-  @include u-text-l;
+
+  &--sm {
+    padding: 15px 29px 13px;
+
+    @include u-text-base;
+  }
 }
 
 .service-article {

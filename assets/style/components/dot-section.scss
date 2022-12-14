@@ -8,6 +8,20 @@
   position: relative;
   margin: 100px auto 210px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  @media (--large) {
+    width: 800px;
+    margin: 41px auto 80px;
+  }
+  @media (--tablet) {
+    width: 708px;
+    margin: 48px auto 60px;
+  }
+  @media (--mobile) {
+    width: 330px;
+    margin: 12px auto 50px;
+  }
   &:after {
     bottom: -60px;
     content: "";
@@ -16,5 +30,26 @@
     width: 30px;
     height: 30px;
     position: absolute;
+    @media (--large) {
+      width: 25px;
+      height: 25px;
+      bottom: -50px;
+    }
+    @media (--tablet) {
+      width: 20px;
+      height: 20px;
+      bottom: -32px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    @include u-text-xl6;
+    @media (--large) {
+      margin-bottom: 5px;
+    }
+    @media (--tablet) {
+      margin-bottom: 10px;
+    }
   }
 }

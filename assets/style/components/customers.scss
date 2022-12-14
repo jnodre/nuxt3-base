@@ -1,0 +1,146 @@
+.customers {
+  width: 1680px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 800px);
+  place-content: space-between;
+  row-gap: 100px;
+  margin-bottom: 250px;
+  @media (--desktop) {
+    width: 1080px;
+    grid-template-columns: repeat(2, 500px);
+    margin-bottom: 180px;
+    row-gap: 70px;
+  }
+  @media (--tablet) {
+    grid-template-columns: 1fr;
+    row-gap: 55px;
+    width: 708px;
+  }
+  @media (--mobile) {
+    row-gap: 35px;
+    width: 330px;
+  }
+  &__description {
+    grid-column: 1/-1;
+    margin-bottom: 61px;
+    text-align: center;
+    @media (--tablet) {
+      margin-bottom: 40px;
+    }
+    @media (--mobile) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    place-items: center;
+    margin-bottom: 25px;
+    @include u-text-l;
+    &:last-of-type {
+      margin-bottom: unset;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+    &:before {
+      height: 30px;
+      width: 4px;
+      content: "";
+      background: url(~/assets/svg/rectangle.svg);
+      position: relative;
+      margin-right: 16px;
+      transition: 0.3s ease-in-out;
+      background-repeat: no-repeat;
+      @media (--large) {
+        margin-right: 12px;
+      }
+      @media (--mobile) {
+        height: 15px;
+        width: 2px;
+        margin-right: 5px;
+      }
+    }
+
+    &:hover {
+      .modal-menu__sub-link {
+        transition: 0.2s ease-in-out;
+        text-decoration: underline;
+        transform: translateX(30px);
+      }
+      &:before {
+        transform: rotate(15deg);
+      }
+    }
+  }
+
+  &__title {
+    color: var(--purple);
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 24px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: calc(100% + 11px);
+      width: 100%;
+      background: var(--gray);
+      height: 1px;
+      left: 0;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      background-image: url(~/assets/svg/arrow.svg);
+      background-repeat: no-repeat;
+      width: 27px;
+      height: 35px;
+      transform: rotate(-90deg);
+      transition: 0.3s ease-out;
+      @media (--large) {
+        width: 22px;
+      }
+      @media (--mobile) {
+        width: 11px;
+      }
+    }
+    &--active {
+      &:before {
+        transform: rotate(90deg);
+      }
+    }
+    &--no-toggle {
+      cursor: unset;
+      &:before {
+        content: unset;
+      }
+    }
+  }
+  &__bottom {
+    width: 700px;
+    margin: 0 auto;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    @media (--mobile) {
+      width: 330px;
+    }
+  }
+  &__bottom-title {
+    margin-bottom: 24px;
+    color: var(--purple);
+    @include u-text-xl3;
+    @media (--tablet) {
+      margin-bottom: 20px;
+    }
+    @media (--mobile) {
+      margin-bottom: 15px;
+    }
+  }
+}

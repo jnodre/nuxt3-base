@@ -1,0 +1,21 @@
+.back-button {
+  color: var(--purple);
+  width: 1680px;
+  margin: 0 auto;
+
+  @include u-text-base;
+  &:hover {
+    .back-button__link {
+      text-decoration: underline;
+    }
+  }
+  &__arrow {
+    width: 19px;
+    padding-right: 10px;
+  }
+
+  &__link {
+    display: flex;
+    place-items: center;
+  }
+}

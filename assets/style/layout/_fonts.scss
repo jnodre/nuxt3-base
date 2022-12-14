@@ -10,6 +10,8 @@
     line-height: 76px;
   }
   @media (--mobile) {
+    font-size: 40px;
+    line-height: 50px;
   }
 }
 @mixin u-text-xl5 {

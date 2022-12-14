@@ -4,14 +4,14 @@
     <h2 class="page-header__subtitle">{{ subtitle }}</h2>
     <div class="page-header__image-container">
       <img
-        :src="image.url"
+        :src="image?.['url']"
         alt=""
-        :srcset="`${image.url} 1x,${image.url} 2x`"
+        :srcset="`${image?.['url']} 1x,${image?.['url']} 2x`"
       />
     </div>
   </header>
 </template>
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   title: String,
   subtitle: String,

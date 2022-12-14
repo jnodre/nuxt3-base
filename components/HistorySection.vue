@@ -25,8 +25,11 @@
     </section>
   </section>
 </template>
+
 <script lang="ts" setup>
-const props = defineProps({
-  elements: [],
-});
+import { HistoryElements } from "types/history-element";
+
+const props = defineProps<{
+  elements?: HistoryElements;
+}>();
 </script>
