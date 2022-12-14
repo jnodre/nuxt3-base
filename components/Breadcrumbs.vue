@@ -1,12 +1,12 @@
 <template>
-  <nav>
-    <ul>
-      <li>
+  <nav class="breadcrumbs">
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__element">
         <nuxt-link to="/">Asimétrica</nuxt-link>
 
         >
       </li>
-      <li>
+      <li class="breadcrumbs__element">
         <nuxt-link to="/">{{ link }}</nuxt-link>
       </li>
     </ul>

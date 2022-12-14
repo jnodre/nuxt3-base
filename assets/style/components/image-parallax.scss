@@ -6,4 +6,16 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   margin: 140px 0 120px;
+  @media (--large) {
+    margin: 120px 0;
+    height: 333px;
+  }
+  @media (--tablet) {
+    margin: 100px 0;
+    height: 202px;
+  }
+  @media (--mobile) {
+    margin: 50px 0;
+    height: 94px;
+  }
 }
