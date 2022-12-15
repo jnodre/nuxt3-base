@@ -1,7 +1,7 @@
 .back-button {
   color: var(--purple);
   width: 1680px;
-  margin: 0 auto;
+  margin: 30px auto 0;
 
   @include u-text-base;
   &:hover {

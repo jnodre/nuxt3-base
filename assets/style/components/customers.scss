@@ -32,7 +32,20 @@
       margin-bottom: 25px;
     }
   }
-
+  &__list {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    @media (--large) {
+      margin-top: 25px;
+      gap: 20px;
+    }
+    @media (--mobile) {
+      margin-top: 20px;
+      gap: 18px;
+    }
+  }
   &__link {
     display: flex;
     place-items: center;

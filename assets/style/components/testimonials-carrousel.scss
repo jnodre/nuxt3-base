@@ -1,0 +1,124 @@
+.testimonial {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  @media (--large) {
+    width: 450px;
+  }
+  @media (--tablet) {
+    width: 550px;
+  }
+  @media (--mobile) {
+    width: 330px;
+  }
+
+  &__description {
+    @include u-text-l;
+    @media (--tablet) {
+      width: 500px;
+    }
+  }
+  &__subtitle {
+    margin: 5px 0 20px;
+    color: var(--purple);
+    @include u-text-xl;
+    @media (--large) {
+      margin: 5px 0 15px;
+    }
+    @media (--tablet) {
+      margin: 5px 0 10px;
+      width: 500px;
+    }
+    @media (--mobile) {
+      margin: 5px 0;
+    }
+  }
+  &__title {
+    font-weight: 600;
+    color: var(--purple);
+    @include u-text-xl3;
+
+    @media (--tablet) {
+      width: 500px;
+    }
+  }
+}
+.testimonials-carrousel {
+  background: var(--light-pink);
+  padding: 100px 0 135px;
+  text-align: center;
+
+  &__title {
+    width: 960px;
+    margin: 0 auto;
+
+    @include u-text-xl5;
+  }
+  &__text {
+    width: 960px;
+    margin: 25px auto 80px;
+
+    @include u-text-xl;
+  }
+  &__slider {
+    display: flex;
+    place-items: center;
+    gap: 70px;
+    width: 400vw;
+    transition: 0.6s ease-out;
+    &--sm {
+      place-content: center;
+      width: auto;
+      margin: 0 auto;
+      gap: 70px;
+      @media (--large) {
+        gap: 80px;
+      }
+    }
+  }
+  &__slider-container {
+    width: 1796px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    padding: 0 76px;
+    margin: 0 auto;
+    display: flex;
+    place-items: center;
+    @media (--large) {
+      width: 1185px;
+    }
+    @media (--tablet) {
+      width: 708px;
+    }
+    @media (--mobile) {
+      width: 330px;
+    }
+  }
+  &__button {
+    position: absolute;
+    width: 38px;
+    left: 0;
+    transition: transform 0.3s ease-out;
+    z-index: 2;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &--sm {
+      display: none;
+      @media (--tablet) {
+        display: block;
+      }
+    }
+    &--rotate {
+      transform: rotate(180deg);
+      left: unset;
+      right: 0;
+      &:hover {
+        transform: rotate(180deg) scale(1.1);
+      }
+    }
+  }
+}

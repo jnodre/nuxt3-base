@@ -1,6 +1,48 @@
 .breadcrumbs {
   display: flex;
   place-items: center;
-  place-content: center;
   color: var(--gray);
+  width: 1680px;
+  margin: 20px auto 0;
+  @include u-text-base;
+
+  @media (--large) {
+    width: 1080px;
+  }
+  @media (--tablet) {
+    width: 708px;
+  }
+  @media (--mobile) {
+    width: 330px;
+  }
+  &__list {
+    display: flex;
+  }
+  &__link {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__element {
+    display: flex;
+    place-items: center;
+    text-transform: capitalize;
+
+    &:after {
+      content: "";
+      margin: 0 10px;
+      background: url(~/assets/svg/triangle.svg);
+      width: 8px;
+      height: 4px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: rotate(225deg);
+    }
+    &:last-of-type {
+      font-weight: 600;
+      &:after {
+        content: unset;
+      }
+    }
+  }
 }

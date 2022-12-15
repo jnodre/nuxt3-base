@@ -1,32 +1,48 @@
 <template>
-  <section class="testimonials">
-    <h2 class="testimonials__title">Clientes y Testimonios</h2>
-    <p class="testimonials__text">
-      Asimétrica se siente orgullosa de haber trabajado con decenas de
-      organizaciones culturales en España resto de Europa y América Latina.
-      Esperamos poder darte la bienvenida a nuestra familia de clientes.
+  <section class="testimonials-carrousel">
+    <h2 class="testimonials-carrousel__title" v-if="title.length">
+      {{ title }}
+    </h2>
+    <p class="testimonials-carrousel__text" v-if="description.length">
+      {{ description }}
     </p>
-    <section class="testimonials__slider-container">
-      <button class="testimonials__button" @click="moveSliderLeft()">
+    <section class="testimonials-carrousel__slider-container">
+      <button
+        :class="{
+          'testimonials-carrousel__button--sm': testimonials.length <= 3,
+        }"
+        class="testimonials-carrousel__button"
+        @click="moveSliderLeft()"
+      >
         <img src="~/assets/svg/arrow.svg" alt="" />
       </button>
-      <div class="testimonials__slider" id="slider">
-        <article class="testimonial" v-for="(i, index) in 5" :key="index">
-          <h2 class="testimonial__title">Félix Alcaraz</h2>
+      <div
+        class="testimonials-carrousel__slider"
+        id="slider"
+        :class="{
+          'testimonials-carrousel__slider--sm': testimonials.length <= 3,
+        }"
+      >
+        <article
+          class="testimonial"
+          :class="{ 'testimonial--inactive': index !== activeTestimonial }"
+          v-for="(i, index) in testimonials"
+          :key="index"
+        >
+          <h2 class="testimonial__title">{{ i.title }}</h2>
           <h3 class="testimonial__subtitle">
-            Orquesta y Coro Nacionales de España
+            {{ i.subtitle }}
           </h3>
           <p class="testimonial__description">
-            “Con Asimétrica hemos sido capaces de invertir la tendencia de
-            caídas en los abonos que sacudía a la OCNE en los últimos años.
-            Gracias a sus estrategias de desarrollo de producto y a las campañas
-            de renovación y recuperación de abonados podemos mirar al futuro con
-            confianza.”
+            {{ i.description }}
           </p>
         </article>
       </div>
       <button
-        class="testimonials__button testimonials__button--rotate"
+        :class="{
+          'testimonials-carrousel__button--sm': testimonials.length <= 3,
+        }"
+        class="testimonials-carrousel__button testimonials-carrousel__button--rotate"
         @click="moveSliderRight()"
       >
         <img src="~/assets/svg/arrow.svg" alt="" />
@@ -37,9 +53,29 @@
 <script lang="ts" setup>
 import type { Ref } from "vue";
 
+const props = defineProps({
+  testimonials: {
+    type: Array<Object>,
+    required: true,
+  },
+  title: {
+    type: String,
+    default: "",
+  },
+  description: {
+    type: String,
+    default: "",
+  },
+});
+
+let activeTestimonial: Ref<number> = ref(0);
 let slider: HTMLElement | null = null;
+let testimonial: HTMLElement<Element> | null = null;
 let sliderPosition: Ref<number> = ref(0);
-onMounted(() => (slider = document.getElementById("slider")));
+onMounted(() => {
+  (slider = document.getElementById("slider")),
+    (testimonial = document.getElementsByClassName("testimonial"));
+});
 
 function moveSliderLeft(): void {
   if (slider !== null) {
@@ -49,7 +85,6 @@ function moveSliderLeft(): void {
 }
 function moveSliderRight(): void {
   if (slider !== null) {
-    console.log(slider);
     sliderPosition.value = sliderPosition.value - 500;
     slider.style.transform = `translateX(${sliderPosition.value}px)`;
   }

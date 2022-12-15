@@ -1,11 +1,11 @@
 export interface Teacher {
-  id: Number;
+  id: number;
   name: String;
   job: String;
   company: String;
   linkedin: String;
   twitter: String;
-  position: Number;
+  position: number;
   created_at: String;
   updated_at: String;
   job_es: String;

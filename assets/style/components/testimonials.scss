@@ -1,50 +1,40 @@
-.testimonial {
-  width: 500px;
-  &__description {
-    @include u-text-l;
-  }
-  &__subtitle {
-    margin: 5px 0 20px;
-    color: var(--purple);
-    @include u-text-xl;
-  }
-  &__title {
-    font-weight: 600;
-    color: var(--purple);
-    @include u-text-xl3;
-  }
-}
 .testimonials {
   background: var(--light-pink);
-  padding: 100px 0 135px;
+  padding: 100px 0;
   text-align: center;
+  @media (--large) {
+    padding: 70px 0;
+  }
+  @media (--tablet) {
+    padding: 50px 0;
+  }
+  @media (--mobile) {
+    padding: 35px 0;
+  }
   &__title {
     width: 960px;
-    margin: 0 auto;
+    margin: 0 auto 80px;
 
     @include u-text-xl5;
+
+    @media (--large) {
+      width: 450px;
+      margin: 0 auto 50px;
+    }
+    @media (--tablet) {
+      width: 500px;
+      margin: 0 auto 40px;
+    }
+    @media (--mobile) {
+      margin: 0 auto 25px;
+
+      width: 330px;
+    }
   }
-  &__text {
-    width: 960px;
-    margin: 25px auto 80px;
-    @include u-text-xl;
-  }
-  &__slider {
+  &__container {
     display: flex;
-    place-items: center;
-    gap: 70px;
-    width: 400vw;
-    transition: 0.6s ease-out;
-  }
-  &__slider-container {
-    width: 1796px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    position: relative;
-    padding: 0 76px;
-    margin: 0 auto;
-    display: flex;
-    place-items: center;
+    place-content: center;
+ 
   }
   &__button {
     position: absolute;
@@ -52,6 +42,12 @@
     left: 0;
     transition: transform 0.3s ease-out;
     z-index: 2;
+    display: none;
+    @media (--tablet) {
+      width: 30px;
+      display: block;
+    }
+
     &:hover {
       transform: scale(1.1);
     }

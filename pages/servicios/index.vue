@@ -11,7 +11,7 @@ para el sector cultural"
   />
   <ImageParallax :image="{ url: 'https://dummyimage.com/100.gif' }" />
   <ServicesContainer />
-  <Testimonials />
+  <TestimonialsCarrousel />
   <Customers togglesActive />
   <WorkUs />
   <Subscribe />
