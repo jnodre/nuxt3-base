@@ -25,6 +25,9 @@
       },
     ]"
   />
+  <WhatWeDo />
+  <WorkUs />
+  <Subscribe />
 </template>
 <script lang="ts" setup>
 const { data: page } = await useFetch(
