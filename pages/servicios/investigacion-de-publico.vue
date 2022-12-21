@@ -9,17 +9,41 @@
     />
     <ImageParallax />
   </section>
-  <Testimonials
+  <TestimonialsCarrousel
     :testimonials="[
       {
-        title: 'Alan Brown',
-        subtitle: 'Wolfbrown',
+        name: 'Alan Brown',
+        company: 'Wolfbrown',
         description:
           '“Asociarnos a Asimétrica nos ha abierto la comprensión del público de las artes en España y Latino América. Estamos orgullosos de trabajar con un socio serio, íntegro y profesional, capaz de realizar complejos estudios de público para las artes escénicas y museos fuera de EEUU.”',
       },
       {
-        title: 'Félix Alcaraz',
-        subtitle: 'Orquesta y Coro Nacionales de España',
+        name: 'Félix Alcaraz',
+        company: 'Orquesta y Coro Nacionales de España',
+        description:
+          '“Con Asimétrica hemos sido capaces de invertir la tendencia de caídas en los abonos que sacudía a la OCNE en los últimos años. Gracias a sus estrategias de desarrollo de producto y a las campañas de renovación y recuperación de abonados podemos mirar al futuro con confianza.”',
+      },
+      {
+        name: 'Félix Alcaraz',
+        company: 'Orquesta y Coro Nacionales de España',
+        description:
+          '“Con Asimétrica hemos sido capaces de invertir la tendencia de caídas en los abonos que sacudía a la OCNE en los últimos años. Gracias a sus estrategias de desarrollo de producto y a las campañas de renovación y recuperación de abonados podemos mirar al futuro con confianza.”',
+      },
+      {
+        name: 'Félix Alcaraz',
+        company: 'Orquesta y Coro Nacionales de España',
+        description:
+          '“Con Asimétrica hemos sido capaces de invertir la tendencia de caídas en los abonos que sacudía a la OCNE en los últimos años. Gracias a sus estrategias de desarrollo de producto y a las campañas de renovación y recuperación de abonados podemos mirar al futuro con confianza.”',
+      },
+      {
+        name: 'Félix Alcaraz',
+        company: 'Orquesta y Coro Nacionales de España',
+        description:
+          '“Con Asimétrica hemos sido capaces de invertir la tendencia de caídas en los abonos que sacudía a la OCNE en los últimos años. Gracias a sus estrategias de desarrollo de producto y a las campañas de renovación y recuperación de abonados podemos mirar al futuro con confianza.”',
+      },
+      {
+        name: 'Félix Alcaraz',
+        company: 'Orquesta y Coro Nacionales de España',
         description:
           '“Con Asimétrica hemos sido capaces de invertir la tendencia de caídas en los abonos que sacudía a la OCNE en los últimos años. Gracias a sus estrategias de desarrollo de producto y a las campañas de renovación y recuperación de abonados podemos mirar al futuro con confianza.”',
       },

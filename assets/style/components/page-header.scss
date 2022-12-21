@@ -7,6 +7,15 @@
   width: 100%;
   padding: 100px 0 120px;
   overflow: hidden;
+  @media (--large) {
+    padding: 80px 0;
+  }
+  @media (--tablet) {
+    padding: 40px 0 52px;
+  }
+  @media (--mobile) {
+    padding: 0;
+  }
   &__title,
   &__subtitle {
     position: relative;
@@ -14,6 +23,13 @@
     width: 1050px;
     text-align: center;
     color: var(--white);
+    @media (--tablet) {
+      width: 708px;
+    }
+    @media (--mobile) {
+      width: 330px;
+      color: var(--black);
+    }
   }
   &__subtitle {
     @include u-text-xl3;
@@ -21,6 +37,9 @@
   &__title {
     margin-bottom: 40px;
     @include u-text-xl6;
+    @media (--large) {
+      margin-bottom: 10px;
+    }
   }
 
   &__image-container {
@@ -35,6 +54,13 @@
       background-color: black;
       opacity: 0.3;
       z-index: 1;
+    }
+    @media (--mobile) {
+      position: relative;
+      width: 100%;
+      height: auto;
+      order: -1;
+      margin-bottom: 12px;
     }
   }
 }

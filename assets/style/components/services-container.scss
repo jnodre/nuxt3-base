@@ -4,6 +4,19 @@
   width: 1420px;
   gap: 120px;
   margin: 0 auto;
+  @media (--large) {
+    width: 1080px;
+    gap: 60px;
+  }
+  @media (--tablet) {
+    width: 708px;
+  }
+  @media (--mobile) {
+    width: 330px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+  }
   &__title {
     grid-column: 1/-1;
     text-align: center;
@@ -18,7 +31,15 @@
   padding: 11px 48px 10px;
   width: max-content;
   transition: 0.3s ease-out;
-
+  @media (--large) {
+    padding: 10px 58px 8px;
+  }
+  @media (--tablet) {
+    padding: 12px 56px 9px;
+  }
+  @media (--mobile) {
+    padding: 10px 66px 8px;
+  }
   @include u-text-l;
 
   &:hover {
@@ -47,27 +68,80 @@
     grid-column: 1/-1;
     width: 940px;
     text-align: left;
+
+    @media (--large) {
+      width: 770px;
+    }
+    @media (--tablet) {
+      width: 690px;
+    }
+    @media (--mobile) {
+      width: 330px;
+      text-align: center;
+    }
     .service-article__icon {
       flex-basis: 100%;
       width: 250px;
       height: max-content;
+      @media (--large) {
+        width: 220px;
+      }
+      @media (--tablet) {
+        width: 180px;
+      }
+      @media (--mobile) {
+        width: 60px;
+      }
     }
     .button {
       margin: unset;
+      @media (--mobile) {
+        margin: 0 auto;
+      }
     }
   }
   &__description {
     margin: 20px 0 40px;
     width: 650px;
     @include u-text-l;
+    @media (--large) {
+      width: 510px;
+      margin: 15px 0 30px;
+    }
+    @media (--tablet) {
+      width: 324px;
+      margin: 10px 0 20px;
+    }
+    @media (--mobile) {
+      width: 330px;
+      margin: 5px 0 20px;
+    }
   }
   &__icon {
     margin: 0 auto;
     width: 150px;
+    @media (--large) {
+      width: 120px;
+    }
+    @media (--tablet) {
+      width: 100px;
+    }
+    @media (--mobile) {
+      width: 60px;
+    }
   }
   &__title {
     color: var(--purple);
     width: 650px;
     @include u-text-xl3;
+    @media (--large) {
+      width: 510px;
+    }
+    @media (--tablet) {
+      width: 324px;
+    }
+    @media (--tablet) {
+      width: 330px;
+    }
   }
 }

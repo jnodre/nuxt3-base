@@ -26,6 +26,8 @@
     line-height: 62px;
   }
   @media (--mobile) {
+    font-size: 30px;
+    line-height: 42px;
   }
 }
 @mixin u-text-xl4 {
@@ -40,6 +42,8 @@
     line-height: 55px;
   }
   @media (--mobile) {
+    font-size: 25px;
+    line-height: 35px;
   }
 }
 @mixin u-text-xl3 {
@@ -54,6 +58,8 @@
     line-height: 42px;
   }
   @media (--mobile) {
+    font-size: 22px;
+    line-height: 32px;
   }
 }
 @mixin u-text-xl2 {
@@ -68,6 +74,8 @@
     line-height: 35px;
   }
   @media (--mobile) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 @mixin u-text-xl {
@@ -82,6 +90,8 @@
     line-height: 30px;
   }
   @media (--mobile) {
+    font-size: 18px;
+    line-height: 28px;
   }
 }
 @mixin u-text-l {
@@ -96,6 +106,8 @@
     line-height: 28px;
   }
   @media (--mobile) {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 @mixin u-text-base {
@@ -110,6 +122,8 @@
     line-height: 22px;
   }
   @media (--mobile) {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 
@@ -125,5 +139,7 @@
     line-height: 20px;
   }
   @media (--mobile) {
+    font-size: 12px;
+    line-height: 16px;
   }
 }

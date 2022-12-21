@@ -15,6 +15,7 @@
   <TestimonialsCarrousel
     title="Clientes y Testimonios"
     description="Asimétrica se siente orgullosa de haber trabajado con decenas de organizaciones culturales en España resto de Europa y América Latina. Esperamos poder darte la bienvenida a nuestra familia de clientes."
+    :testimonials="testimonials.data"
   />
   <HistorySection
     :elements="[
@@ -32,4 +33,10 @@
   />
   <Team title="Equipo" />
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { Testimonials } from "types/testimonial";
+
+const { data: testimonials } = useFetch<any>(
+  "https://api.asimetrica.abanico.net/api/testimonials"
+);
+</script>
