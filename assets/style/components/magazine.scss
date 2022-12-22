@@ -1,0 +1,33 @@
+.magazine {
+  display: flex;
+  gap: 80px;
+  @media (--large) {
+  }
+  &__date-author {
+    display: flex;
+    place-content: space-between;
+    @include u-text-l;
+  }
+  &__description {
+    margin-bottom: 50px;
+    @include u-text-l;
+  }
+  &__image-container {
+    width: 48%;
+  }
+  &__information-container {
+    width: 48%;
+    text-align: left;
+    padding-top: 44px;
+  }
+  &__subtitle {
+    margin: 5px 0 20px;
+    color: var(--purple);
+    @include u-text-xl;
+  }
+  &__title {
+    font-weight: 600;
+    color: var(--purple);
+    @include u-text-xl3;
+  }
+}

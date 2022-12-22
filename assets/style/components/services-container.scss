@@ -24,13 +24,27 @@
     @include u-text-xl5;
   }
 }
-
+.button-container {
+  display: flex;
+  width: 1040px;
+  gap: 40px;
+  margin: 0 auto 150px;
+  .button {
+    width: 100%;
+    text-align: center;
+    a {
+      width: 100%;
+    }
+  }
+}
 .button {
   border: 1px solid var(--pink);
   border-radius: 50px;
   padding: 11px 48px 10px;
   width: max-content;
   transition: 0.3s ease-out;
+  position: relative;
+  z-index: 20;
   @media (--large) {
     padding: 10px 58px 8px;
   }
@@ -52,6 +66,34 @@
     padding: 15px 29px 13px;
 
     @include u-text-base;
+  }
+  &--dark {
+    border: 1px solid var(--purple);
+    background: var(--purple);
+    color: var(--white);
+    &:hover {
+      background: unset;
+      color: var(--purple);
+    }
+  }
+  &--light {
+    border: 1px solid var(--pink);
+    background: var(--white);
+    color: var(--black);
+    padding: 11px 37px 10px;
+    @media (--large) {
+      padding: 10px 50px 8px;
+    }
+    @media (--tablet) {
+      padding: 12px 55px 9px;
+    }
+    @media (--mobile) {
+      padding: 10px 60px 8px;
+    }
+    &:hover {
+      background: var(--pink);
+      color: var(--white);
+    }
   }
 }
 

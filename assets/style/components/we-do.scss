@@ -16,6 +16,9 @@
   @media (--mobile) {
     flex-direction: column;
     gap: 40px;
+    place-content: center;
+    place-items: center;
+    width: 330px;
   }
 
   &__element {

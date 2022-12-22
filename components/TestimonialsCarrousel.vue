@@ -23,16 +23,20 @@
           <h3 class="testimonial__subtitle">
             {{ testimonial.company }}
           </h3>
-          <p class="testimonial__description">
-            {{ testimonial.description }}
-          </p>
+          <p
+            class="testimonial__description"
+            v-html="testimonial.description"
+          ></p>
         </article>
       </div>
       <button
         class="testimonials-carrousel__button testimonials-carrousel__button--rotate"
         @click="moveSliderRight()"
         v-if="
-          windowWidth >= 1600 && sliderIndex < testimonialsReative.length - 3
+          (windowWidth >= 1600 && sliderIndex <= testimonials.length - 4) ||
+          (windowWidth >= 1250 &&
+            sliderIndex <= testimonials.length - 3 &&
+            windowWidth < 1600)
         "
       >
         <img src="~/assets/svg/arrow.svg" alt="" />
@@ -52,7 +56,11 @@
         <button
           class="testimonials-carrousel__button testimonials-carrousel__button--rotate"
           @click="moveSliderRight()"
-          v-if="windowWidth >= 1600 && sliderIndex < testimonials.length - 3"
+          v-if="
+            (windowWidth >= 1600 && sliderIndex <= testimonials.length - 3) ||
+            windowWidth >= 1250 ||
+            (windowWidth < 1250 && sliderIndex < testimonials.length - 1)
+          "
         >
           <img src="~/assets/svg/arrow.svg" alt="" />
         </button>
@@ -61,61 +69,46 @@
   </section>
 </template>
 <script lang="ts" setup>
-import type { Ref, PropType } from "vue";
+import type { Ref } from "vue";
 import { Testimonials } from "types/testimonial";
 
-// const props = defineProps({
-//   testimonials: {
-//     type: Array as PropType<Testimonials>,
-//     required: true,
-//   },
-//   title: {
-//     type: String,
-//     default: "",
-//   },
-//   description: {
-//     type: String,
-//     default: "",
-//   },
-// });
 interface Props {
-  title: string;
-  description: number;
+  title?: string;
+  description?: string;
   testimonials: Testimonials;
 }
-const { testimonials, title, description } = defineProps<Props>();
 
-//hace reactiva la prop
-// const testimonials: Testimonials = toRefs(props.testimonials);
+const { testimonials, title, description } = defineProps<Props>();
 
 let sliderIndex: Ref<number> = ref(0);
 let slider: HTMLElement | null = null;
 let sliderWidth: HTMLElement | null = null;
 let sliderPosition: Ref<number> = ref(0);
-let windowWidth: number = 0;
+let windowWidth: Ref<number> = ref(0);
 
 if (process.client) {
   window.addEventListener("resize", onResize);
 }
+
 onMounted(() => {
   slider = document.getElementById("slider");
   sliderWidth = document.getElementById("slider-width");
-  windowWidth = window.innerWidth;
+  windowWidth.value = window.innerWidth;
 });
 
 function onResize(): void {
-  slider.style.transform = "translateX(0px)";
+  slider!.style.transform = "translateX(0px)";
   sliderIndex.value = 0;
   sliderWidth = document.getElementById("slider-width");
   sliderPosition.value = 0;
-  windowWidth = window.innerWidth;
+  windowWidth.value = window.innerWidth;
 }
 
 function moveSliderLeft(): void {
   if (slider !== null) {
     sliderPosition.value =
       sliderPosition.value +
-      sliderWidth.offsetWidth +
+      sliderWidth!.offsetWidth +
       parseInt(getComputedStyle(slider).gap.replace("px", ""));
     slider.style.transform = `translateX(${sliderPosition.value}px)`;
     sliderIndex.value--;
@@ -125,7 +118,7 @@ function moveSliderRight(): void {
   if (slider !== null) {
     sliderPosition.value =
       sliderPosition.value -
-      sliderWidth.offsetWidth -
+      sliderWidth!.offsetWidth -
       parseInt(getComputedStyle(slider).gap.replace("px", ""));
     slider.style.transform = `translateX(${sliderPosition.value}px)`;
     sliderIndex.value++;

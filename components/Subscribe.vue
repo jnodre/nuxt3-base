@@ -1,7 +1,9 @@
 <template>
   <section class="subscribe">
     <div class="subscribe__title" v-html="subscribeBlock.title"></div>
-    <nuxt-link class="subscribe__link" to="/suscribirse">Suscribirme</nuxt-link>
+    <nuxt-link class="button button--light" to="/suscribirse"
+      >Suscribirme</nuxt-link
+    >
     <div class="subscribe__image">
       <img :src="subscribeBlock.image.url" alt="" />
     </div>

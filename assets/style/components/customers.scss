@@ -6,7 +6,7 @@
   place-content: space-between;
   row-gap: 100px;
   margin-bottom: 250px;
-  @media (--desktop) {
+  @media (--large) {
     width: 1080px;
     grid-template-columns: repeat(2, 500px);
     margin-bottom: 180px;

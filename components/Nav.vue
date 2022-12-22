@@ -9,11 +9,11 @@
         </li>
         <li class="nav__element nav__element--right">
           <a class="nav__link" href="">Agenda una llamada</a>
+          <a class="nav__link nav__link--mobile" href="">Agendar llamada</a>
         </li>
-        <li class="nav__element nav__element--right">
+        <li class="nav__element nav__element--right nav__search">
           <button
             @click="toggleSearch"
-            class="nav__search"
             aria-label="Buscar"
             aria-controls="modal-search"
             aria-expanded="false"
