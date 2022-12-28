@@ -4,13 +4,17 @@
   width: 1280px;
   margin: 0 auto;
   text-align: center;
+  padding-top: 150px;
   @media (--large) {
     width: 1080px;
+    padding-top: 120px;
   }
   @media (--tablet) {
     width: 708px;
+    padding-top: 100px;
   }
   @media (--mobile) {
+    padding-top: 70px;
     width: 330px;
   }
   &__description {

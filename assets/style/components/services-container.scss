@@ -76,6 +76,7 @@
       color: var(--purple);
     }
   }
+
   &--light {
     border: 1px solid var(--pink);
     background: var(--white);
@@ -94,6 +95,12 @@
       background: var(--pink);
       color: var(--white);
     }
+  }
+  &--full {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
   }
 }
 
