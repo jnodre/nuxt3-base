@@ -1,3 +1,17 @@
 body {
   font-family: "Alegreya", serif;
 }
+
+.page-pink {
+  background: var(--light-pink);
+  padding-top: 30px;
+  @media (--large) {
+    padding-top: 15px;
+  }
+  @media (--tablet) {
+    padding-top: 20px;
+  }
+  @media (--mobile) {
+    padding-top: 10px;
+  }
+}

@@ -40,6 +40,11 @@
       height: 20px;
       bottom: -32px;
     }
+    @media (--mobile) {
+      width: 12px;
+      height: 12px;
+      bottom: -22px;
+    }
   }
 
   &__title {

@@ -1,6 +1,6 @@
 <template>
   <section class="history-section">
-    <h2 class="history-section__title">Un poco de historia...</h2>
+    <h2 class="history-section__title">{{ title }}</h2>
     <article
       class="history-section__element"
       v-for="(element, index) in elements"
@@ -19,9 +19,9 @@
         alt=""
       />
     </article>
-    <section class="history-section__know-more">
+    <section class="history-section__know-more" v-if="short">
       <h2 class="history-section__know-more-title">¿Quieres saber más?</h2>
-      <nuxt-link to="" class="button">Conócenos</nuxt-link>
+      <nuxt-link to="/sobre-asimetrica" class="button">Conócenos</nuxt-link>
     </section>
   </section>
 </template>
@@ -29,7 +29,12 @@
 <script lang="ts" setup>
 import { HistoryElements } from "types/history-element";
 
-const props = defineProps<{
-  elements?: HistoryElements;
-}>();
+interface Props {
+  title?: string;
+  description?: string;
+  elements: HistoryElements;
+  short?: boolean;
+}
+
+const { title, description, elements } = defineProps<Props>();
 </script>

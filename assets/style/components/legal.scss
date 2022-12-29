@@ -1,0 +1,23 @@
+.legal {
+  &__text {
+    width: 960px;
+    margin: 0 auto;
+    @include u-text-l;
+
+    @media (--large) {
+      width: 740px;
+    }
+    @media (--tablet) {
+      width: 708px;
+    }
+    @media (--mobile) {
+      width: 330px;
+    }
+    p {
+      margin-bottom: 20px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

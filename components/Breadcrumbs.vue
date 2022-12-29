@@ -10,11 +10,11 @@
         :key="index"
       >
         <template v-if="index === routesList.length - 1">
-          <span>{{ removeBar(route) }}</span>
+          <span>{{ title || removeBar(route) }}</span>
         </template>
         <template v-else>
           <nuxt-link class="breadcrumbs__link" :to="`/${route}`">{{
-            removeBar(route)
+            title || removeBar(route)
           }}</nuxt-link>
         </template>
       </li>
@@ -23,6 +23,12 @@
 </template>
 <script lang="ts" setup>
 import type { Ref } from "vue";
+
+interface Props {
+  title?: string;
+}
+
+const { title } = defineProps<Props>();
 
 const route = useRoute();
 

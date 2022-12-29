@@ -17,6 +17,8 @@
     :testimonials="testimonials.data"
   />
   <HistorySection
+    short
+    title="Un poco de historia..."
     :elements="[
       {
         title: '1º Así comenzamos…',
@@ -30,7 +32,7 @@
       },
     ]"
   />
-  <Team title="Equipo" />
+  <Team title="Equipo" :team="teachers.data" />
   <FeaturedMagazine
     :magazine="{
       title: 'CA 17 - Escuchando a la audiencia',
@@ -45,11 +47,20 @@
   />
   <WorkUs />
   <Subscribe />
+  <Modal
+    title="Esta dirección de correo ya está registrada"
+    description="Por si acaso, revisa en tu carpeta spam o de correo promocional y agréganos a tu listado de direcciones."
+    buttonActive
+    active
+  />
 </template>
 <script setup lang="ts">
 import { Testimonials } from "types/testimonial";
 
 const { data: testimonials } = useFetch<any>(
   "https://api.asimetrica.abanico.net/api/testimonials"
+);
+const { data: teachers } = useFetch<any>(
+  "https://api.asimetrica.abanico.net/api/teachers"
 );
 </script>

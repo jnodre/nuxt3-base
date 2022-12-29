@@ -1,0 +1,123 @@
+.team-element {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: center;
+  place-items: center;
+  place-content: center;
+
+  @media (--large) {
+    gap: 8px;
+  }
+  @media (--tablet) {
+    gap: 5px;
+  }
+
+  &:nth-of-type(4n + 2) {
+    .team-element__image-container {
+      &:after {
+        bottom: 0;
+        right: 0;
+        top: unset;
+        left: unset;
+      }
+    }
+  }
+  &:nth-of-type(4n + 3) {
+    .team-element__image-container {
+      &:after {
+        bottom: unset;
+        left: unset;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+  &:nth-of-type(4n + 4) {
+    .team-element__image-container {
+      &:after {
+        bottom: 0;
+        right: unset;
+        top: unset;
+        left: 0;
+      }
+    }
+  }
+  &__job {
+    color: var(--purple);
+    @include u-text-xl;
+  }
+  &__name {
+    color: var(--purple);
+    font-weight: 600;
+    @include u-text-xl3;
+  }
+  &__organization {
+    @include u-text-xl;
+  }
+  &__social-container {
+    display: flex;
+    margin-top: 5px;
+    place-items: center;
+    place-content: center;
+    gap: 20px;
+
+    @media (--large) {
+      gap: 20px;
+    }
+    @media (--tablet) {
+      gap: 40px;
+    }
+    @media (--mobile) {
+      gap: 20px;
+    }
+  }
+  &__social-link {
+    width: 25px;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    img {
+      width: 24px;
+    }
+  }
+  &__image-container {
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+    &:after {
+      top: 0;
+      left: 0;
+      content: "";
+      border-radius: 100%;
+      background: var(--pink);
+      width: 30px;
+      height: 30px;
+      position: absolute;
+
+      @media (--tablet) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  &__image {
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 100%;
+    @media (--large) {
+      width: 250px;
+      height: 250px;
+    }
+    @media (--tablet) {
+      width: 200px;
+      height: 200px;
+    }
+    @media (--mobile) {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}
