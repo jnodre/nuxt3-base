@@ -5,7 +5,9 @@
     <Magazine :magazine="magazine" />
     <div class="featured-magazine__bottom">
       <h4 class="featured-magazine__bottom-title">¿Con ganas de más?</h4>
-      <nuxt-link class="button" to="">Ir a publicaciones</nuxt-link>
+      <nuxt-link class="button" to="/publicaciones"
+        >Ir a publicaciones</nuxt-link
+      >
     </div>
   </section>
 </template>

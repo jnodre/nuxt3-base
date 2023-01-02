@@ -6,4 +6,6 @@
     description="Orgullosos de haber trabajado con decenas de organizaciones culturales por el mundo."
   />
   <Customers />
+  <WorkUs />
+  <Subscribe />
 </template>

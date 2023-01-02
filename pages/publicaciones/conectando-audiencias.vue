@@ -4,6 +4,9 @@
     title="Conectando Audiencias"
     description="La revista para profesionales de la gestión cultural"
   />
+  <PageText
+    description="<p style='text-align: center'>Conectando Audiencias es un proyecto editorial que busca compartir las mejores prácticas internacionales en torno al desarrollo de públicos, el marketing de las artes y la gestión cultural.</p>"
+  />
   <FeaturedMagazine
     :magazine="{
       title: 'CA 17 - Escuchando a la audiencia',

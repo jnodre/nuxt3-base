@@ -1,5 +1,5 @@
 <template>
-  <section class="team-container">
+  <section class="team-container" v-if="team">
     <h2 class="team-container__title">{{ title }}</h2>
     <h3 v-if="description" class="team-container__description">
       {{ description }}
@@ -18,8 +18,8 @@ import { Teachers } from "types/teacher";
 interface Props {
   title?: string;
   description?: string;
-  team: Teachers;
+  team?: Teachers;
 }
 
-const { teachers, title, description } = defineProps<Props>();
+const { team, title, description } = defineProps<Props>();
 </script>

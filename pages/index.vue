@@ -9,8 +9,8 @@
   <DotSection
     description="ASIMÉTRICA es un equipo de profesionales de la gestión cultural preparado para conocer y ampliar el público de las organizaciones culturales de forma sostenible."
   />
-
-  <ServicesContainer />
+  <ServicesContainer title="Servicios" />
+  <WorkUs />
   <TestimonialsCarrousel
     title="Clientes y Testimonios"
     description="Asimétrica se siente orgullosa de haber trabajado con decenas de organizaciones culturales en España resto de Europa y América Latina. Esperamos poder darte la bienvenida a nuestra familia de clientes."

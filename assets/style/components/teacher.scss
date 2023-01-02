@@ -1,0 +1,121 @@
+.teacher {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin: 0 auto;
+  //   padding: 63px 0 150px;
+  padding: 63px 0 0;
+
+  @media (--large) {
+    width: 650px;
+    // padding: 60px 0 100px;
+    padding: 60px 0 0;
+  }
+  @media (--tablet) {
+    width: 708px;
+    // padding: 48px 0 80px;
+    padding: 48px 0 0;
+  }
+  @media (--mobile) {
+    width: 330px;
+    // padding: 20px 0 30px;
+    padding: 20px 0 0;
+  }
+  &__description {
+    margin-top: 80px;
+
+    @include u-text-l;
+
+    p {
+      margin-bottom: 20px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (--large) {
+      margin-top: 50px;
+    }
+    @media (--tablet) {
+      margin-top: 40px;
+    }
+    @media (--mobile) {
+      margin-top: 30px;
+    }
+  }
+  &__image {
+    img {
+      border-radius: 100%;
+    }
+    @media (--tablet) {
+      width: 250px;
+    }
+    @media (--mobile) {
+      width: 120px;
+    }
+  }
+  &__information {
+    display: flex;
+    gap: 50px;
+
+    @media (--large) {
+      gap: 40px;
+    }
+    @media (--mobile) {
+      gap: 20px;
+    }
+  }
+  &__data {
+    margin-top: 66px;
+
+    @media (--large) {
+      margin-top: 36px;
+    }
+    @media (--tablet) {
+      margin-top: 52px;
+    }
+    @media (--mobile) {
+      margin-top: 0;
+    }
+  }
+  &__name {
+    color: var(--purple);
+    font-weight: 600;
+
+    @include u-text-xl3;
+  }
+  &__job {
+    margin: 5px 0;
+    color: var(--purple);
+
+    @include u-text-xl;
+  }
+  &__company {
+    @include u-text-xl;
+  }
+
+  &__social-container {
+    display: flex;
+    margin-top: 5px;
+    place-items: center;
+    gap: 20px;
+
+    @media (--large) {
+      gap: 20px;
+    }
+    @media (--tablet) {
+      gap: 40px;
+    }
+    @media (--mobile) {
+      gap: 20px;
+    }
+  }
+  &__social-link {
+    width: 25px;
+    display: flex;
+    place-items: center;
+    img {
+      width: 24px;
+    }
+  }
+}

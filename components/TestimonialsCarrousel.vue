@@ -1,5 +1,5 @@
 <template>
-  <section class="testimonials-carrousel" v-if="testimonials.length">
+  <section class="testimonials-carrousel" v-if="testimonials?.length">
     <h2 class="testimonials-carrousel__title">{{ title }}</h2>
     <p class="testimonials-carrousel__text">
       {{ description }}
@@ -75,7 +75,7 @@ import { Testimonials } from "types/testimonial";
 interface Props {
   title?: string;
   description?: string;
-  testimonials: Testimonials;
+  testimonials?: Testimonials;
 }
 
 const { testimonials, title, description } = defineProps<Props>();

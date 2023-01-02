@@ -3,13 +3,20 @@
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__element nav__element--center">
-          <nuxt-link to="" aria-label="Enlace a la home"
+          <nuxt-link
+            @click.prevent="closeMenu()"
+            to="/"
+            aria-label="Enlace a la home"
             ><img class="nav__logo" src="/images/logo.png" alt=""
           /></nuxt-link>
         </li>
         <li class="nav__element nav__element--right">
-          <a class="nav__link" href="">Agenda una llamada</a>
-          <a class="nav__link nav__link--mobile" href="">Agendar llamada</a>
+          <nuxt-link class="nav__link" top="/contacto"
+            >Agenda una llamada</nuxt-link
+          >
+          <nuxt-link class="nav__link nav__link--mobile" to="/contacto"
+            >Agendar llamada</nuxt-link
+          >
         </li>
         <li class="nav__element nav__element--right nav__search">
           <button
@@ -64,8 +71,8 @@
   >
     <ul class="modal-menu__list">
       <li class="modal-menu__element">
-        <nuxt-link to="/servicios/"
-          ><span class="modal-menu__text-wrapper">Servicio</span></nuxt-link
+        <nuxt-link @click.prevent="closeMenu()" to="/servicios/"
+          ><span class="modal-menu__text-wrapper">Servicios</span></nuxt-link
         >
 
         <ul class="modal-menu__sub-list">
@@ -107,33 +114,33 @@
         </ul>
       </li>
       <li class="modal-menu__element">
-        <nuxt-link to="/publicaciones"
+        <nuxt-link @click.prevent="closeMenu()" to="/publicaciones"
           ><span class="modal-menu__text-wrapper"
             >Publicaciones</span
           ></nuxt-link
         >
       </li>
       <li class="modal-menu__element">
-        <nuxt-link to="/blog"
+        <nuxt-link @click.prevent="closeMenu()" to="/blog"
           ><span class="modal-menu__text-wrapper">Blog</span></nuxt-link
         >
       </li>
       <li class="modal-menu__element">
-        <nuxt-link to="/sobre-asimetrica"
+        <nuxt-link @click.prevent="closeMenu()" to="/sobre-asimetrica"
           ><span class="modal-menu__text-wrapper"
             >Sobre Asimétrica</span
           ></nuxt-link
         >
       </li>
       <li class="modal-menu__element">
-        <nuxt-link to="/contacto"
+        <nuxt-link @click.prevent="closeMenu()" to="/contacto"
           ><span class="modal-menu__text-wrapper"
             >Agenda una llamada / Contacto</span
           ></nuxt-link
         >
       </li>
       <li class="modal-menu__element">
-        <nuxt-link to="/newsletter"
+        <nuxt-link @click.prevent="closeMenu()" to="/newsletter"
           ><span class="modal-menu__text-wrapper">Newsletter</span></nuxt-link
         >
       </li>
@@ -145,12 +152,17 @@
 import type { Ref } from "vue";
 let menuOn: Ref<boolean> = ref(false);
 let searchOn: Ref<boolean> = ref(false);
-function toggleMenu() {
+function toggleMenu(): void {
   menuOn.value = !menuOn.value;
   searchOn.value = false;
 }
-function toggleSearch() {
+function toggleSearch(): void {
   searchOn.value = !searchOn.value;
+  menuOn.value = false;
+}
+function closeMenu(): void {
+  menuOn.value = false;
+  searchOn.value = false;
   menuOn.value = false;
 }
 </script>

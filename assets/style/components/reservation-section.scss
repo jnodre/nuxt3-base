@@ -1,0 +1,116 @@
+.reservation-section {
+  display: flex;
+  place-content: space-between;
+  width: 1680px;
+  margin: 0 auto 150px;
+
+  @media (--large) {
+    width: 1080px;
+    margin: 0 auto 120px;
+  }
+  @media (--tablet) {
+    width: 708px;
+    margin: 0 auto 100px;
+    flex-direction: column;
+  }
+  @media (--mobile) {
+    width: 330px;
+    margin: 0 auto 80px;
+  }
+  &__text {
+    max-width: 800px;
+    @media (--large) {
+      max-width: 600px;
+    }
+    @media (--tablet) {
+      max-width: 708px;
+    }
+    @media (--mobile) {
+      max-width: 330px;
+    }
+    .page-text {
+      //Quitarle el ancho del componente para que se ajuste
+      width: unset;
+      margin-top: 100px;
+      @media (--large) {
+        margin-top: 80px;
+      }
+      @media (--tablet) {
+        margin-top: 60px;
+      }
+      @media (--mobile) {
+        margin-top: 60px;
+      }
+    }
+  }
+  &__title {
+    color: var(--purple);
+    font-weight: 600;
+    @include u-text-l;
+  }
+  &__description {
+    @include u-text-xl2;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-bottom: 35px;
+    @media (--large) {
+      column-gap: 15px;
+      row-gap: 15px;
+      margin-bottom: 25px;
+    }
+    @media (--tablet) {
+      column-gap: 15px;
+      row-gap: 15px;
+      margin-bottom: 25px;
+    }
+    @media (--mobile) {
+      column-gap: 10px;
+      row-gap: 10px;
+      margin-bottom: 15px;
+    }
+  }
+  &__information {
+    width: 800px;
+    background: var(--light-pink);
+    border-radius: 20px;
+    padding: 50px 30px;
+    @media (--large) {
+      padding: 40px 25px;
+      width: 600px;
+    }
+    @media (--tablet) {
+      padding: 40px 25px;
+      width: 708px;
+    }
+    @media (--mobile) {
+      padding: 20px 15px;
+      width: 330px;
+    }
+  }
+  &__information-element {
+    border-radius: 20px;
+    background: var(--white);
+    padding: 31px 30px 30px;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    text-align: center;
+    flex-direction: column;
+    @media (--large) {
+      padding: 26px 25px 25px;
+    }
+    @media (--tablet) {
+      padding: 26px 25px 25px;
+    }
+    @media (--mobile) {
+      padding: 16px 15px 15px;
+    }
+    &--full {
+      grid-column: 1/-1;
+    }
+  }
+}

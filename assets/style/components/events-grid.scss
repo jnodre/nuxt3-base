@@ -14,6 +14,17 @@
     width: 330px;
     padding-top: 50px;
   }
+
+  &--recommended {
+    padding-bottom: 120px;
+
+    .events-grid__title {
+      font-weight: 600;
+      color: var(--purple);
+      @include u-text-xl3;
+    }
+  }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

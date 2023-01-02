@@ -1,29 +1,68 @@
 .magazine {
   display: flex;
-  gap: 80px;
-  @media (--large) {
+  place-content: space-between;
+  @media (--mobile) {
+    flex-direction: column;
+    gap: 15px;
   }
   &__date-author {
     display: flex;
     place-content: space-between;
+    margin-bottom: 10px;
     @include u-text-l;
+    @media (--large) {
+      margin-bottom: 17px;
+    }
+    @media (--tablet) {
+      margin-bottom: 6px;
+    }
+    @media (--mobile) {
+      margin-bottom: 5px;
+    }
   }
   &__description {
     margin-bottom: 50px;
     @include u-text-l;
+    @media (--large) {
+      margin-bottom: 60px;
+    }
+    @media (--tablet) {
+      margin-bottom: 25px;
+    }
+    @media (--mobile) {
+      margin-bottom: 20px;
+    }
   }
   &__image-container {
     width: 48%;
+    @media (--mobile) {
+      width: 100%;
+    }
   }
   &__information-container {
     width: 48%;
     text-align: left;
     padding-top: 44px;
+    @media (--tablet) {
+      padding-top: 0;
+    }
+    @media (--mobile) {
+      width: 100%;
+    }
   }
   &__subtitle {
     margin: 5px 0 20px;
     color: var(--purple);
     @include u-text-xl;
+    @media (--large) {
+      margin: 5px 0 15px;
+    }
+    @media (--tablet) {
+      margin: 5px 0 10px;
+    }
+    @media (--mobile) {
+      margin: 10px 0 8px;
+    }
   }
   &__title {
     font-weight: 600;

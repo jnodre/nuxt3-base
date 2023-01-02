@@ -6,6 +6,8 @@
       forma que resulte más conveniente para ti. Estaremos encantados de
       atenderte.
     </p>
-    <a class="nav__link" href="">Agenda una llamada</a>
+    <nuxt-link class="work-us__link" to="/contacto"
+      >Agenda una llamada</nuxt-link
+    >
   </section>
-</template>
+</template> 

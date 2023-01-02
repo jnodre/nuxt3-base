@@ -7,8 +7,10 @@
   place-content: center;
   opacity: 0;
   transition: 0.3s ease-in-out;
+  pointer-events: none;
   &--active {
     opacity: 1;
+    pointer-events: all;
   }
   &:after {
     position: absolute;
