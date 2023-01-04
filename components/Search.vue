@@ -1,8 +1,15 @@
 <template>
   <div class="search-modal" :class="{ 'search-modal--active': searchOn }">
-    <Breadcrumbs link="Búsqueda" />
-    <input type="text" />
-    <label for="">¿Qué estás buscando...?</label>
+    <div class="search-input">
+      <input
+        class="search-input__input"
+        type="text"
+        placeholder="¿Qué estás buscando…?"
+      />
+      <button class="search-input__button">
+        <img src="~/assets/svg/search-white.svg" alt="Buscar" />
+      </button>
+    </div>
   </div>
 </template>
 <script lang="ts" setup>

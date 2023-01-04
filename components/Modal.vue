@@ -16,7 +16,6 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { defineEmits } from "vue";
 import type { Ref } from "vue";
 
 const emit = defineEmits(["closeModal"]);

@@ -1,0 +1,17 @@
+.featured-post {
+  width: 945px;
+  margin: 0 auto;
+}
+.blog {
+  &__grid {
+    width: 1680px;
+    margin: 150px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 120px;
+  }
+  &__button {
+    margin: 120px auto 0;
+    display: block;
+  }
+}

@@ -5,8 +5,9 @@
   </article>
 </template>
 <script lang="ts" setup>
-const props = defineProps({
-  title: String,
-  description: String,
-});
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title, description } = defineProps<Props>();
 </script>
