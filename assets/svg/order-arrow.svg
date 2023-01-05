@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19.997" height="7.003" viewBox="0 0 19.997 7.003">
+  <g id="icon" transform="translate(-385.003 -23)">
+    <g id="arrow" transform="translate(352.314 2054.522) rotate(-90)">
+      <path id="_2" data-name="2" d="M0,.956l6.148.634.73-.955L.731,0Z" transform="translate(2025.441 47.87) rotate(30)" fill="#831d53"/>
+      <path id="_1" data-name="1" d="M0,1.758l6.148-.634L7.07,0,.922.632Z" transform="translate(2031.521 44.212) rotate(150)" fill="#831d53"/>
+    </g>
+    <g id="arrow-2" data-name="arrow" transform="translate(437.689 -2001.52) rotate(90)">
+      <path id="_2-2" data-name="2" d="M0,.956l6.148.634.73-.955L.731,0Z" transform="translate(2025.441 47.87) rotate(30)" fill="#831d53"/>
+      <path id="_1-2" data-name="1" d="M0,1.758l6.148-.634L7.07,0,.922.632Z" transform="translate(2031.521 44.212) rotate(150)" fill="#831d53"/>
+    </g>
+  </g>
+</svg>

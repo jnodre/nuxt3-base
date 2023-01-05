@@ -47,7 +47,7 @@
       @media (--tablet) {
         width: 708px;
       }
-      @media (--tablet) {
+      @media (--mobile) {
         width: 330px;
       }
     }
@@ -95,6 +95,15 @@
 }
 .contact-newsletter {
   margin-bottom: 250px;
+  @media (--large) {
+    margin-bottom: 180px;
+  }
+  @media (--tablet) {
+    margin-bottom: 150px;
+  }
+  @media (--mobile) {
+    margin-bottom: 100px;
+  }
   .page-text {
     margin-bottom: 60px;
     @media (--large) {
@@ -138,11 +147,17 @@
   @media (--mobile) {
     width: 330px;
     gap: 35px;
-    margin: 0 auto 50px;
+    margin: 100px auto 50px;
   }
   .page-text {
     max-width: 100%;
     margin: 0;
+    &__title {
+      margin-bottom: 50px;
+      @media (--large) {
+        margin-bottom: 30px;
+      }
+    }
   }
   &__form {
     width: 790px;

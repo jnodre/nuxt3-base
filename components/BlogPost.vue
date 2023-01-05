@@ -1,5 +1,5 @@
 <template>
-  <article class="blog-post">
+  <article class="blog-post" v-if="post">
     <div class="blog-post__date-container">
       <span class="blog-post__date">{{ post.created_at }}</span>
       <span class="blog-post__author">{{ post.author }}</span>
@@ -26,7 +26,7 @@
 import type { Post } from "types/post";
 
 interface Props {
-  post: Post;
+  post?: Post;
 }
 
 const { post = {} } = defineProps<Props>();

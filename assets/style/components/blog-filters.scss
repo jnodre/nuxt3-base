@@ -1,4 +1,28 @@
 .blog-filters {
   width: 1408px;
   margin: 0 auto 100px;
+  display: flex;
+  gap: 86px;
+  @media (--large) {
+    width: 1080px;
+    gap: 15px;
+    margin-bottom: 80px;
+  }
+  @media (--tablet) {
+    width: 708px;
+    gap: 30px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    div {
+      &:first-child {
+        flex-basis: 100%;
+      }
+    }
+  }
+  @media (--mobile) {
+    width: 330px;
+    gap: 20px;
+    margin-bottom: 35px;
+    flex-direction: column;
+  }
 }

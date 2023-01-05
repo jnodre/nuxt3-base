@@ -1,4 +1,6 @@
 .input-container {
+  flex: 1;
+  position: relative;
   &__input {
     border-bottom: 1px solid var(--purple);
     padding-left: 5px;
@@ -31,6 +33,10 @@
     font-weight: 600;
     padding-left: 5px;
     margin-bottom: 2px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    place-items: center;
     @include u-text-base;
     @media (--large) {
       padding-left: 5px;
@@ -116,7 +122,7 @@
   &__label {
     color: var(--gray);
     cursor: pointer;
-
+    @include u-text-l;
     a {
       color: var(--purple);
       &:hover {
@@ -176,5 +182,75 @@
   @media (--mobile) {
     row-gap: 25px;
     grid-template-columns: 1fr;
+  }
+}
+
+.select-label {
+  border-bottom: 1px solid var(--purple);
+  padding-left: 5px;
+  padding-bottom: 4px;
+  resize: none;
+  color: var(--gray);
+  position: relative;
+  display: flex;
+  place-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  @include u-text-l;
+  &--active {
+    color: var(--black);
+  }
+  &__icon {
+    position: absolute;
+    right: 10px;
+    height: 7px;
+    width: auto;
+  }
+
+  @media (--large) {
+    padding-left: 5px;
+    padding-bottom: 6px;
+  }
+  @media (--tablet) {
+    padding-left: 7px;
+    padding-bottom: 3px;
+  }
+  @media (--mobile) {
+    padding-left: 3px;
+    padding-bottom: 2px;
+  }
+}
+.select {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  border: 1px solid var(--purple);
+  border-top: 0;
+  width: 100%;
+  pointer-events: none;
+  position: absolute;
+  background-color: white;
+  z-index: 10;
+  @include u-text-base;
+  li {
+    border-bottom: 1px solid var(--purple);
+    padding: 10px 15px;
+    cursor: pointer;
+    &:last-of-type {
+      border: unset;
+      padding: 10px 15px 20px;
+    }
+    &:first-of-type {
+      padding: 20px 15px 10px;
+    }
+    &:hover {
+      background: var(--purple);
+      color: var(--white);
+    }
+  }
+  &--active {
+    opacity: 1;
+    pointer-events: all;
   }
 }

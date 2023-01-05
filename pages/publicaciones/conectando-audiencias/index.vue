@@ -19,8 +19,9 @@
     title="Leer, ver, escuchar…"
     description="El disfrute del saber"
   />
+  <ListenSection title="Abiertos a escuchar, compartir, invitar…" />
   <MediaContainer
-    :videos="videos.data.slice(0, 3)"
+    :videos="magazines.data.slice(0, 3)"
     title="Asimétrica en Vimeo"
     subtitle="Encuentros digitales y más contenidos en vídeo."
   />
@@ -30,7 +31,7 @@
 <script setup lang="ts">
 import { Testimonials } from "types/testimonial";
 
-const { data: testimonials } = useFetch<any>(
-  "https://api.asimetrica.abanico.net/api/testimonials"
+const { data: magazines } = useFetch<any>(
+  "https://api.asimetrica.abanico.net/api/magazines"
 );
 </script>

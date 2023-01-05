@@ -2,36 +2,35 @@
   <Breadcrumbs />
   <DotSection
     title="Newsletter Asimétrica"
-    description="Suscríbete a información mensual y para recibir cada nuevo número de Conectando Audiencias cómodamente en tu correo electrónico"
+    description="Subscribe to monthly information and to receive each new issue of Conectando Audiencias comfortably in your email."
   />
   <PageText
-    description="<div style='text-align: center'><p>Más de 2.000 gestores culturales ya reciben nuestra newsletter con los mejores recursos y noticias destacadas sobre investigación, marketing cultural y desarrollo de público para las artes.</p><p>Entérate antes que nadie sobre nuestras novedades, estudios y casos prácticos, recibe nuestra revista digital <strong>Conectando Audiencias</strong> en tu buzón de correo y forma parte de la comunidad más comprometida con la relación entre organizaciones artísticas y público.</p></div>"
+    description="<div style='text-align: center'><p>More than 2,000 cultural managers already receive our newsletter with the best resources and outstanding news on research, cultural marketing and audience development for the arts.
+</p><p>Find out before anyone else about our news, studies and case studies, receive our digital magazine <strong>Conectando Audiencias</strong> in your mailbox and be part of the community most committed to the relationship between artistic organizations and the public.</p></div>"
   />
   <form action="" class="newsletter-form">
     <div class="input-container">
-      <label class="input-container__label" for="name">Nombre</label>
+      <label class="input-container__label" for="name">Name</label>
       <input
         class="input-container__input"
         type="text"
         name="name"
         id="name"
-        placeholder="Nombre"
+        placeholder="Name"
       />
     </div>
     <div class="input-container">
-      <label class="input-container__label" for="surname">Apellidos</label>
+      <label class="input-container__label" for="surname">Surname</label>
       <input
         class="input-container__input"
         type="text"
         name="surname"
         id="surname"
-        placeholder="Apellidos"
+        placeholder="Surname"
       />
     </div>
     <div class="input-container">
-      <label class="input-container__label" for="email"
-        >Correo electrónico</label
-      >
+      <label class="input-container__label" for="email">Email</label>
       <input
         class="input-container__input"
         type="text"
@@ -42,26 +41,26 @@
     </div>
     <div class="input-container">
       <label class="input-container__label" for="repeat-email"
-        >Confirmar correo electrónico</label
+        >Confirm the email</label
       >
       <input
         class="input-container__input"
         type="text"
         name="repeat-email"
         id="repeat-email"
-        placeholder="Confirmar correo electrónico"
+        placeholder="Confirm the email"
       />
     </div>
     <div class="input-container input-container--full">
       <label class="input-container__label" for="job"
-        >Organización / Cargo / Dedicación</label
+        >Organization / Position / Dedication</label
       >
       <input
         class="input-container__input"
         type="text"
         name="job"
         id="job"
-        placeholder="Organización / Cargo / Dedicación"
+        placeholder="Organization / Position / Dedication"
       />
     </div>
     <div class="checkbox-container">
@@ -72,15 +71,18 @@
         id="privacy"
       />
       <label for="privacy" class="checkbox-container__label"
-        >He leído y acepto la
+        >I have read and accept the
         <nuxt-link to="/politica-de-privacidad"
-          >política de privacidad</nuxt-link
+          >privacy policy</nuxt-link
         ></label
       >
     </div>
     <div></div>
-    <button class="button button--full">Suscribirme</button>
+    <button class="button button--full">Suscribe</button>
   </form>
-  <WorkUs />
-  <Subscribe />
+  <WorkUsEn />
+  <SubscribeEn />
 </template>
+<script lang="ts" setup>
+definePageMeta({ layout: "en" });
+</script>

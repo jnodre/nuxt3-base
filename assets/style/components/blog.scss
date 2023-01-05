@@ -1,6 +1,15 @@
 .featured-post {
   width: 945px;
   margin: 0 auto;
+  @media (--large) {
+    width: 630px;
+  }
+  @media (--tablet) {
+    width: 708px;
+  }
+  @media (--mobile) {
+    width: 330px;
+  }
 }
 .blog {
   &__grid {
@@ -9,9 +18,34 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 120px;
+    @media (--large) {
+      gap: 80px;
+      width: 1080px;
+      margin: 80px auto 0;
+    }
+    @media (--tablet) {
+      gap: 60px;
+      width: 708px;
+      margin: 80px auto 0;
+    }
+    @media (--mobile) {
+      gap: 35px;
+      width: 330px;
+      margin: 35px auto 0;
+      grid-template-columns: 1fr;
+    }
   }
   &__button {
     margin: 120px auto 0;
     display: block;
+    @media (--large) {
+      margin: 100px auto 0;
+    }
+    @media (--tablet) {
+      margin: 90px auto 0;
+    }
+    @media (--mobile) {
+      margin: 60px auto 0;
+    }
   }
 }

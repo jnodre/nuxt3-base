@@ -27,6 +27,18 @@
   @media (--mobile) {
     width: 330px;
   }
+  &--en {
+    width: 1680px;
+    margin: 0 auto;
+    padding: 0;
+
+    .nav__list {
+      width: 100%;
+      display: flex;
+      place-content: space-between;
+      place-items: center;
+    }
+  }
   &__link {
     position: relative;
     @media (--mobile) {
@@ -101,11 +113,32 @@
     display: flex;
     place-items: center;
     place-content: center;
-
+    position: relative;
     @include u-text-base;
     @media (--tablet) {
       &:first-of-type {
         margin-right: auto;
+      }
+    }
+    &--dot {
+      &:after {
+        content: "";
+        position: absolute;
+        background-color: var(--pink);
+        width: 15px;
+        height: 15px;
+        right: -20px;
+        border-radius: 100%;
+        top: -5px;
+        transition: 0.3s ease-in-out;
+        @include u-text-base;
+      }
+      &:hover {
+        text-decoration: underline;
+        &:after {
+          right: -18px;
+          top: -3px;
+        }
       }
     }
     &--right {
