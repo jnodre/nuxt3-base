@@ -28,15 +28,20 @@ const route = useRoute();
 
 interface Props {
   title?: string;
+  id?: boolean;
 }
 
-const { title } = defineProps<Props>();
+const { title, id } = defineProps<Props>();
 
-let routesList: Ref<String[]> = ref([]);
-
-onMounted(
-  () => (routesList.value = route.path.split("/").filter((r) => r.length))
-);
+let routesList = computed<String[]>(() => {
+  if (id) {
+    return (routesList.value = route.path
+      .split("/")
+      .filter((r) => r.length)
+      .slice(0, -1));
+  } else
+    return (routesList.value = route.path.split("/").filter((r) => r.length));
+});
 
 function removeBar(string: String): String {
   return string.replace("-", " ");

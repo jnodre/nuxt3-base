@@ -1,5 +1,5 @@
 <template>
-    <NavEn />
-    <slot />
-    <FooterEn />
-  </template>
+  <NavEn />
+  <slot />
+  <FooterEn />
+</template>

@@ -19,7 +19,9 @@
     <p class="blog-post__categories">Categorías</p>
     <h2 class="blog-post__title">{{ post.title }}</h2>
     <p class="blog-post__description">{{ post.entry }}</p>
-    <nuxt-link to="" class="button">Leer más</nuxt-link>
+    <nuxt-link :to="`/blog/${post.title}/${post.id}`" class="button"
+      >Leer más</nuxt-link
+    >
   </article>
 </template>
 <script lang="ts" setup>

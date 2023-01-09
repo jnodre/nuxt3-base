@@ -17,6 +17,9 @@
   }
   &__list {
     display: flex;
+    @media (--mobile) {
+      flex-wrap: wrap;
+    }
   }
   &__link {
     &:hover {
@@ -27,7 +30,7 @@
     display: flex;
     place-items: center;
     text-transform: capitalize;
-
+    word-break: break-all;
     &:after {
       content: "";
       margin: 0 10px;

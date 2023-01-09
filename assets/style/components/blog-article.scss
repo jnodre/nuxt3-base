@@ -1,0 +1,118 @@
+.blog-article {
+  width: 960px;
+  margin: 63px auto 0;
+  @media (--large) {
+    width: 630px;
+    margin: 41px auto 0;
+  }
+  @media (--tablet) {
+    width: 760px;
+    margin: 48px auto 0;
+  }
+  @media (--mobile) {
+    width: 330px;
+    margin: 12px auto 0;
+  }
+  &__title {
+    color: var(--purple);
+    margin-bottom: 20px;
+    @include u-text-xl3;
+    @media (--large) {
+      margin-bottom: 15px;
+    }
+    @media (--tablet) {
+      margin-bottom: 10px;
+    }
+    @media (--mobile) {
+      margin-bottom: 5px;
+    }
+  }
+  &__categories {
+    margin: 45px 0 10px;
+    color: var(--gray);
+    @include u-text-l;
+    @media (--large) {
+      margin: 20px 0;
+    }
+    @media (--tablet) {
+      margin: 15px 0;
+    }
+    @media (--mobile) {
+      margin: 10px 0 5px;
+    }
+  }
+  &__image {
+    width: 100%;
+  }
+  &__date-container {
+    display: flex;
+    place-content: space-between;
+    margin-bottom: 10px;
+    font-weight: 600;
+    @include u-text-l;
+    @media (--large) {
+      margin-bottom: 8px;
+    }
+    @media (--mobile) {
+      margin-bottom: 5px;
+    }
+  }
+  &__content {
+    margin-bottom: 80px;
+    @include u-text-l;
+    @media (--large) {
+      margin-bottom: 50px;
+    }
+    @media (--mobile) {
+      margin-bottom: 35px;
+    }
+    p {
+      margin-bottom: 20px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    img {
+      width: 100%;
+    }
+    figure {
+      margin: 80px auto 63px;
+      @media (--large) {
+        margin: 50px auto;
+      }
+      @media (--mobile) {
+        margin: 35px auto;
+      }
+    }
+    figcaption {
+      padding: 14px 20px;
+      position: relative;
+      display: flex;
+      place-items: center;
+      color: var(--gray);
+      @media (--large) {
+        padding: 7px 13px;
+      }
+      @media (--tablet) {
+        padding: 9px 13px;
+      }
+      @media (--mobile) {
+        padding: 4px 8px;
+      }
+      &:after {
+        content: "";
+        width: 5px;
+        height: 100%;
+        left: 0;
+        background: var(--pink);
+        position: absolute;
+        @media (--large) {
+          width: 3px;
+        }
+        @media (--mobile) {
+          width: 1px;
+        }
+      }
+    }
+  }
+}

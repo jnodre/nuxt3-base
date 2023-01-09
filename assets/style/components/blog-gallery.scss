@@ -1,0 +1,17 @@
+.blog-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 51px;
+  margin-bottom: 80px;
+  @media (--large) {
+    gap: 33px;
+    margin-bottom: 50px;
+  }
+  @media (--tablet) {
+    gap: 37px;
+  }
+  @media (--mobile) {
+    gap: 10px;
+    margin-bottom: 35px;
+  }
+}

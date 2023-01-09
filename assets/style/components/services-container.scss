@@ -102,6 +102,10 @@
     padding-right: 0;
     text-align: center;
   }
+  &--center {
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 .service-article {
