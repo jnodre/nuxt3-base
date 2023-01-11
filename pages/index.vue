@@ -1,4 +1,6 @@
 <template>
+  <!--TODO Añadir funcionalidad abrir modal-->
+
   <PageHeader
     title="Te damos la bienvenida a
     Asimétrica"

@@ -1,9 +1,10 @@
 <template>
+  <!--TODO Añadir funcionalidad abrir modal-->
   <section class="magazine-item">
     <h2 class="magazine-item__title">{{ title }}</h2>
     <h3 class="magazine-item__description">{{ description }}</h3>
     <Magazine :magazine="magazine" full />
-    <button @click="openModal()" class="button button--dark">Descargar</button>
+    <button class="button button--dark">Descargar</button>
     <p class="magazine-item__download">
       Este recurso ha sido descargado XX veces.
     </p>
