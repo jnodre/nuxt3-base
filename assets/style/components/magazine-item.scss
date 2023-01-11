@@ -1,0 +1,168 @@
+.magazine-item {
+  display: flex;
+  flex-direction: column;
+  width: 1680px;
+  margin: 0 auto;
+  text-align: center;
+  @media (--large) {
+    width: 1130px;
+  }
+  @media (--tablet) {
+    width: 708px;
+    .magazine {
+      flex-direction: column;
+      place-items: center;
+      gap: 20px;
+    }
+  }
+  @media (--mobile) {
+    width: 330px;
+  }
+  .magazine__title {
+    color: unset;
+    font-weight: unset;
+    @include u-text-xl6;
+  }
+  .magazine__subtitle {
+    color: unset;
+    margin: 20px 0 40px;
+    @include u-text-xl2;
+    @media (--large) {
+      margin: 5px 0 20px;
+    }
+    @media (--tablet) {
+      margin: 15px 0;
+    }
+    @media (--mobile) {
+      margin: 5px 0 10px;
+    }
+  }
+  .magazine__information-container {
+    padding-top: 0;
+    width: 890px;
+    @media (--large) {
+      width: 540px;
+    }
+    @media (--tablet) {
+      width: 100%;
+    }
+  }
+  .magazine__image-container {
+    width: 690px;
+    @media (--large) {
+      width: 550px;
+    }
+    @media (--tablet) {
+      width: 324px;
+    }
+    @media (--mobile) {
+      width: 180px;
+    }
+  }
+  .magazine__date-author {
+    margin-bottom: 10px;
+
+    @include u-text-xl;
+
+    @media (--large) {
+      margin-bottom: 8px;
+    }
+    @media (--tablet) {
+      margin-bottom: 6px;
+    }
+    @media (--mobile) {
+      margin-bottom: 5px;
+    }
+
+    span {
+      &:first-child {
+        font-weight: 600;
+      }
+    }
+  }
+  // @media (--large) {
+  //   width: 1080px;
+  //   padding-top: 120px;
+  // }
+  // @media (--tablet) {
+  //   width: 708px;
+  //   padding-top: 100px;
+  // }
+  // @media (--mobile) {
+  //   padding-top: 70px;
+  //   width: 330px;
+  // }
+  &__description {
+    margin: 25px 0 60px;
+
+    @include u-text-xl;
+
+    @media (--large) {
+      margin: 15px 0 40px;
+    }
+    @media (--tablet) {
+      margin: 10px 0 40px;
+    }
+    @media (--mobile) {
+      margin: 5px 0 25px;
+    }
+  }
+  &__title {
+    @include u-text-xl6;
+  }
+  &__subtitle {
+    @include u-text-xl2;
+  }
+  &__bottom-title {
+    font-weight: 600;
+    margin-top: 120px;
+    text-align: center;
+    @include u-text-xl3;
+    @media (--large) {
+      margin-top: 100px;
+    }
+    @media (--tablet) {
+      margin-top: 90px;
+    }
+    @media (--mobile) {
+      margin-top: 60px;
+    }
+  }
+  &__download {
+    margin-top: 25px;
+    text-align: center;
+    font-weight: 600;
+
+    @include u-text-l;
+
+    @media (--large) {
+      margin-top: 15px;
+    }
+    @media (--tablet) {
+      margin-top: 20px;
+    }
+    @media (--mobile) {
+      margin-top: 12px;
+    }
+  }
+  .button {
+    margin: 100px auto 0;
+    padding-left: 248px;
+    padding-right: 248px;
+    @media (--large) {
+      margin: 60px auto 0;
+      padding-left: 183px;
+      padding-right: 183px;
+    }
+    @media (--tablet) {
+      margin: 40px auto 0;
+      padding-left: 125px;
+      padding-right: 125px;
+    }
+    @media (--mobile) {
+      margin: 30px auto 0;
+      padding-left: 132px;
+      padding-right: 132px;
+    }
+  }
+}

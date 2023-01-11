@@ -8,6 +8,7 @@
   opacity: 0;
   transition: 0.3s ease-in-out;
   pointer-events: none;
+
   &--active {
     opacity: 1;
     pointer-events: all;
@@ -97,6 +98,38 @@
       height: 35px;
       top: 30px;
       right: 15px;
+    }
+  }
+  &__slot {
+    .button {
+      margin-top: -10px;
+      @media (--large) {
+        margin-top: -20px;
+      }
+      @media (--tablet) {
+        margin-top: 0;
+      }
+    }
+    .newsletter-form {
+      width: 100%;
+    }
+    .checkbox-container {
+      @media (--mobile) {
+        margin-left: 0;
+      }
+    }
+    > form {
+      margin-top: 60px;
+
+      @media (--large) {
+        margin-top: 56px;
+      }
+      @media (--tablet) {
+        margin-top: 40px;
+      }
+      @media (--mobile) {
+        margin-top: 12px;
+      }
     }
   }
 }

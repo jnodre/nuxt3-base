@@ -11,7 +11,9 @@
       <h2 class="modal__title">{{ title }}</h2>
       <h2 class="modal__description">{{ description }}</h2>
       <button v-if="buttonActive" class="button button--full">Entendido</button>
-      <slot></slot>
+      <div class="modal__slot">
+        <slot></slot>
+      </div>
     </div>
   </div>
 </template>

@@ -3,9 +3,9 @@
   text-align: center;
   position: relative;
   display: flex;
-  place-content: center;
   flex-direction: column;
-  overflow: hidden;
+  width: 780px;
+  margin: 0 auto;
 
   @media (--large) {
     padding: 70px 0;
@@ -96,7 +96,6 @@
     margin: 0 auto;
     display: flex;
     place-items: center;
-    transform: translateX(494px);
     .blog-post {
       width: 780px;
       opacity: 0.6;

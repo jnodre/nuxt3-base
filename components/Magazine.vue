@@ -13,7 +13,7 @@
       <h3 class="magazine__title">{{ magazine.title }}</h3>
       <h4 class="magazine__subtitle">{{ magazine.subtitle }}</h4>
       <div class="magazine__description" v-html="magazine.description"></div>
-      <nuxt-link to="" class="button button--full button--light"
+      <nuxt-link v-if="full" to="" class="button button--full button--light"
         >Saber más</nuxt-link
       >
     </div>
@@ -24,6 +24,7 @@
 import { Magazine } from "types/magazine";
 interface Props {
   magazine: Magazine;
+  full: Boolean;
 }
 
 const { magazine } = defineProps<Props>();

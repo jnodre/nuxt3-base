@@ -30,7 +30,7 @@
     <BlogDownloadFile />
     <BlogShare />
   </main>
-  <BlogRecommendations :posts="posts" />
+  <!-- <BlogRecommendations :posts="posts" /> -->
 
   <WorkUs />
   <Subscribe />

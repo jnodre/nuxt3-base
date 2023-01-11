@@ -1,6 +1,7 @@
 <template>
+  <Breadcrumbs />
   <DotSection
-    title="Atención por el detalle, transparencia y calidad en las relaciones"
+    description="Atención por el detalle, transparencia y calidad en las relaciones"
   />
   <PageText
     title="Experiencia, independencia y resultados"

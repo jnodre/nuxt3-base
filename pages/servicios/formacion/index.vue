@@ -38,6 +38,7 @@
   <NextEvent :event="events.data[0]" />
   <EventsGrid :events="events.data" title="Todos los talleres" />
   <FeaturedMagazine
+    bottom
     :magazine="{
       title: 'CA 17 - Escuchando a la audiencia',
       subtitle: 'Una oportunidad para redefinir nuestro futuro',

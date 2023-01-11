@@ -1,4 +1,5 @@
 <template>
+  <!--Arreglar boton de cerrar menu/busqueda-->
   <header class="header">
     <nav class="nav">
       <ul class="nav__list">
@@ -152,6 +153,24 @@
 import type { Ref } from "vue";
 let menuOn: Ref<boolean> = ref(false);
 let searchOn: Ref<boolean> = ref(false);
+
+watch(menuOn, (value) => {
+  if (value) {
+    searchOn.value = false;
+  }
+  value
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "visible");
+});
+watch(searchOn, (value) => {
+  if (value) {
+    menuOn.value = false;
+  }
+  value
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "visible");
+});
+
 function toggleMenu(): void {
   menuOn.value = !menuOn.value;
   searchOn.value = false;
@@ -163,6 +182,5 @@ function toggleSearch(): void {
 function closeMenu(): void {
   menuOn.value = false;
   searchOn.value = false;
-  menuOn.value = false;
 }
 </script>

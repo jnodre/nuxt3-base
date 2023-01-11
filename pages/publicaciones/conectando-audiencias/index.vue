@@ -16,15 +16,15 @@
         '<p>Tras 10 años de andadura continuamos con la curiosidad intacta por conocer más sobre la audiencia y los públicos, viviendo la realidad que tenemos delante con la mejor actitud y planteando <strong>escuchar al público como una oportunidad para definir una realidad distinta</strong>. En este número, compartiremos 5 aproximaciones distintas de especial relevancia:</p><ul><li><strong>Chris Unitt</strong> (One Further)</li><li><strong>Chris Unitt</strong> (One Further)</li><li><strong>Chris Unitt</strong> (One Further)</li><li><strong>Chris Unitt</strong> (One Further)</li></ul>',
       image: { fullUrlThumb: 'https://dummyimage.com/200.jpg' },
     }"
-    title="Leer, ver, escuchar…"
-    description="El disfrute del saber"
   />
   <ListenSection title="Abiertos a escuchar, compartir, invitar…" />
-  <MediaContainer
-    :videos="magazines.data.slice(0, 3)"
-    title="Asimétrica en Vimeo"
-    subtitle="Encuentros digitales y más contenidos en vídeo."
+  <EventsGrid :events="magazines.data" title="Conectando Audiencias" loadMore />
+  <EditorialTeam
+    title="Consejo editorial"
+    description="Profesionales de la gestión cultural de 6 países conforman el equipo editorial de Conectando Audiencias / Connecting Audiences"
+    :editors="editors"
   />
+  <ParticipateCA />
   <WorkUs />
   <Subscribe />
 </template>
@@ -33,5 +33,8 @@ import { Testimonials } from "types/testimonial";
 
 const { data: magazines } = useFetch<any>(
   "https://api.asimetrica.abanico.net/api/magazines"
+);
+const { data: editors } = useFetch<any>(
+  "https://api.asimetrica.abanico.net/api/teachers"
 );
 </script>

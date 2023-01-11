@@ -3,6 +3,7 @@
 
   <DotSection description="Destacamos" />
   <FeaturedMagazine
+    bottom
     :magazine="{
       title: 'CA 17 - Escuchando a la audiencia',
       subtitle: 'Una oportunidad para redefinir nuestro futuro',

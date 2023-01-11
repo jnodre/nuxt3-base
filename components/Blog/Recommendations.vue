@@ -1,4 +1,5 @@
 <template>
+  <!--TODO rehacer-->
   <section class="recommendations">
     <h2 class="recommendations__title">También podría interesarte…</h2>
     <button

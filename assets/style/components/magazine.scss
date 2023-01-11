@@ -23,6 +23,9 @@
   &__description {
     margin-bottom: 50px;
     @include u-text-l;
+    p {
+      margin-bottom: 20px;
+    }
     @media (--large) {
       margin-bottom: 60px;
     }
