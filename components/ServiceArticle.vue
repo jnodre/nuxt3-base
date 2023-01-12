@@ -13,7 +13,7 @@
     <p class="service-article__description">
       {{ service.description }}
     </p>
-    <nuxt-link to="" class="button">Saber más</nuxt-link>
+    <nuxt-link :to="service.link" class="button">Saber más</nuxt-link>
   </article>
 </template>
 <script setup>

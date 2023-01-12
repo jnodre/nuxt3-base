@@ -1,7 +1,5 @@
 module.exports = {
-  // ignoreFiles: ["**/*.vue"],
   plugins: ["stylelint-scss"],
-  // extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
   extends: [
     "stylelint-config-standard-scss",
     "stylelint-config-recommended-vue",
@@ -18,4 +16,4 @@ module.exports = {
     "no-empty-source": null,
     "rule-empty-line-before": ["always", { except: ["first-nested"] }],
   },
-}
+};

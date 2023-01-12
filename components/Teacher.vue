@@ -54,5 +54,4 @@ const route = useRoute();
 const { data: teacher } = useFetch<any>(
   `https://api.asimetrica.abanico.net/api/teachers/${route.params.id}`
 );
-
 </script>

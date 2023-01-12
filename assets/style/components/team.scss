@@ -1,8 +1,8 @@
 .team-container {
-  background: var(--light-pink);
   padding: 100px 0;
+  background: var(--light-pink);
   @media (--large) {
-    padding: 40px 0;
+    padding: 70px 0;
   }
   @media (--tablet) {
     padding: 50px 0;
@@ -10,10 +10,11 @@
   @media (--mobile) {
     padding: 35px 0;
   }
+
   &__title {
-    text-align: center;
     width: 960px;
     margin: 0 auto;
+    text-align: center;
     @include u-text-xl5;
     @media (--large) {
       width: 800px;
@@ -25,80 +26,83 @@
       width: 330px;
     }
   }
+
   &__description {
     position: relative;
     display: flex;
-    place-items: center;
     place-content: center;
+    place-items: center;
     width: 960px;
-    text-align: center;
     margin: 20px auto 0;
+    text-align: center;
     @include u-text-xl2;
 
     @media (--large) {
-      margin: 5px auto 0;
       width: 800px;
+      margin: 5px auto 0;
     }
     @media (--tablet) {
-      margin: 10px auto 0;
       width: 708px;
+      margin: 10px auto 0;
     }
     @media (--mobile) {
-      margin: 5px auto 0;
       width: 330px;
+      margin: 5px auto 0;
     }
-    &:after {
+
+    &::after {
+      position: absolute;
       bottom: -60px;
-      content: "";
-      border-radius: 100%;
-      background: var(--pink);
       width: 30px;
       height: 30px;
-      position: absolute;
+      content: "";
+      background: var(--pink);
+      border-radius: 100%;
       @media (--large) {
+        bottom: -50px;
         width: 25px;
         height: 25px;
-        bottom: -50px;
       }
       @media (--tablet) {
+        bottom: -32px;
         width: 20px;
         height: 20px;
-        bottom: -32px;
       }
       @media (--mobile) {
+        bottom: -22px;
         width: 12px;
         height: 12px;
-        bottom: -22px;
       }
     }
   }
+
   &__grid {
-    width: 1680px;
-    margin: 120px auto 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 92px;
     row-gap: 100px;
+    column-gap: 92px;
+    width: 1680px;
+    margin: 120px auto 0;
 
     @media (--large) {
-      width: 1180px;
-      margin: 80px auto 0;
       grid-template-columns: repeat(3, 1fr);
       gap: 64px;
+      width: 1180px;
+      margin: 80px auto 0;
     }
     @media (--tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 50px;
+      column-gap: 60px;
       width: 708px;
       margin: 60px auto 0;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 60px;
-      row-gap: 50px;
     }
     @media (--mobile) {
-      width: 330px;
-      margin: 72px auto 0;
       display: flex;
       flex-direction: column;
       gap: 35px;
+      width: 330px;
+      margin: 25px auto 0;
     }
   }
 }

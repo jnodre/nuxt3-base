@@ -1,11 +1,11 @@
 .page-header {
+  position: relative;
   display: flex;
+  flex-direction: column;
   place-content: center;
   place-items: center;
-  position: relative;
-  flex-direction: column;
   width: 100%;
-  padding: 100px 0 120px;
+  padding: 110px 0 130px;
   overflow: hidden;
   @media (--large) {
     padding: 80px 0;
@@ -16,13 +16,17 @@
   @media (--mobile) {
     padding: 0;
   }
+
   &__title,
   &__subtitle {
     position: relative;
     z-index: 2;
     width: 1050px;
-    text-align: center;
     color: var(--white);
+    text-align: center;
+    @media (--large) {
+      width: 880px;
+    }
     @media (--tablet) {
       width: 708px;
     }
@@ -31,35 +35,47 @@
       color: var(--black);
     }
   }
+
   &__subtitle {
     @include u-text-xl3;
   }
+
   &__title {
     margin-bottom: 40px;
     @include u-text-xl6;
     @media (--large) {
       margin-bottom: 10px;
     }
+    @media (--mobile) {
+      margin-bottom: 5px;
+    }
   }
 
   &__image-container {
     position: absolute;
-    z-index: 1;
     inset: 0;
+    z-index: 1;
     object-fit: cover;
-    &:after {
-      content: "";
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &::after {
       position: absolute;
       inset: 0;
+      z-index: 1;
+      content: "";
       background-color: black;
       opacity: 0.3;
-      z-index: 1;
     }
     @media (--mobile) {
       position: relative;
+      order: -1;
       width: 100%;
       height: auto;
-      order: -1;
+      height: per(164, 360);
       margin-bottom: 12px;
     }
   }

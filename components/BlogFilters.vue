@@ -27,13 +27,13 @@
         {{ categoryKey || "Escoge una categoría" }}
         <img
           class="select-label__icon"
-          src="~/assets/svg/order-arrow.svg"
+          src="~/assets/svg/arrow-rotate.svg"
           alt=""
         />
       </button>
 
       <ul class="select" :class="{ 'select--active': categoryActive }">
-        <li @click="filterCategory('')">Sin filtrar</li>
+        <li @click="filterCategory('')">Todas las categorías</li>
         <li
           v-for="(category, index) in categories"
           :key="index"
@@ -59,7 +59,6 @@
       </button>
 
       <ul class="select" :class="{ 'select--active': orderActive }">
-        <li @click="order('')">Sin ordenar</li>
         <li @click="order('Ascendente')">Orden ascendente</li>
         <li @click="order('Descendente')">Orden descendente</li>
       </ul>

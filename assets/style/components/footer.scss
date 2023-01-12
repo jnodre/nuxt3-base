@@ -1,8 +1,10 @@
 .footer {
+  padding: 40px 0 35px;
   color: var(--white);
   background-color: var(--black);
-  padding: 40px 0 35px;
   @include u-text-base;
+  @include u-fix-lh-xd;
+
   @media (--large) {
     padding: 31px 0 30px;
   }
@@ -13,22 +15,25 @@
     padding: 35px 0;
     text-align: center;
   }
+
   &__element {
     display: flex;
     place-items: center;
-    &:after {
-      content: "";
+
+    &::after {
       width: 10px;
       height: 10px;
+      margin: 0 25px;
+      content: "";
       background-color: var(--pink);
       border-radius: 100%;
-      margin: 0 25px;
       @media (--mobile) {
         content: unset;
       }
     }
+
     &:last-of-type {
-      &:after {
+      &::after {
         content: unset;
       }
     }
@@ -42,22 +47,25 @@
           margin-bottom: unset;
         }
       }
+
       &:nth-of-type(3) {
-        &:after {
+        &::after {
           content: unset;
         }
       }
     }
   }
+
   &__link {
     &:hover {
       text-decoration: underline;
     }
   }
+
   &__list {
     display: flex;
-    place-items: center;
     place-content: center;
+    place-items: center;
 
     @media (--tablet) {
       flex-wrap: wrap;

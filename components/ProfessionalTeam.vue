@@ -11,4 +11,5 @@ interface Props {
 }
 
 const { title, button } = defineProps<Props>();
+
 </script>

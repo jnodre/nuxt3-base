@@ -5,11 +5,19 @@
     flex-direction: column;
     gap: 15px;
   }
+
   &__date-author {
     display: flex;
     place-content: space-between;
     margin-bottom: 10px;
     @include u-text-l;
+    @include u-fix-lh-xd;
+
+    span {
+      &:first-of-type {
+        font-weight: 600;
+      }
+    }
     @media (--large) {
       margin-bottom: 17px;
     }
@@ -20,12 +28,12 @@
       margin-bottom: 5px;
     }
   }
+
   &__description {
     margin-bottom: 50px;
+
     @include u-text-l;
-    p {
-      margin-bottom: 20px;
-    }
+
     @media (--large) {
       margin-bottom: 60px;
     }
@@ -35,28 +43,46 @@
     @media (--mobile) {
       margin-bottom: 20px;
     }
+
+    p {
+      margin-bottom: 20px;
+    }
   }
+
   &__image-container {
     width: 48%;
     @media (--mobile) {
       width: 100%;
     }
   }
+
   &__information-container {
     width: 48%;
-    text-align: left;
     padding-top: 44px;
+    text-align: left;
     @media (--tablet) {
       padding-top: 0;
     }
     @media (--mobile) {
       width: 100%;
     }
+
+    .button {
+      @media (--mobile) {
+        display: block;
+        width: max-content;
+        padding: 10px 66px 8px;
+        margin: 5px auto 25px;
+      }
+    }
   }
+
   &__subtitle {
     margin: 5px 0 20px;
     color: var(--purple);
     @include u-text-xl;
+    @include u-fix-lh-xd;
+
     @media (--large) {
       margin: 5px 0 15px;
     }
@@ -67,6 +93,7 @@
       margin: 10px 0 8px;
     }
   }
+
   &__title {
     font-weight: 600;
     color: var(--purple);

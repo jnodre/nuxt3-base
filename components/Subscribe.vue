@@ -20,7 +20,7 @@ const subscribeBlock: SubscribeType = {
   title:
     "<p>Si no lo has hecho ya, puedes suscribirte aquí a nuestro newsletter mensual y recibir cada nuevo número de Conectando Audiencias cómodamente en tu correo electrónico.</p>",
   image: {
-    url: "https://dummyimage.com/200.jpg",
+    url: "/images/subscribe.jpg",
   },
 };
 </script>

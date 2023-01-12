@@ -7,7 +7,7 @@
       class="customers__category"
       v-for="(i, index) in customersCategories"
       :key="index"
-      @click="togglesActive ? (toggleIndex = index) : ''"
+      @click="toggleList(index)"
     >
       <h2
         class="customers__title"
@@ -42,9 +42,10 @@
   </section>
 </template>
 <script lang="ts" setup>
-const props = defineProps({
-  togglesActive: Boolean,
-});
+interface Props {
+  togglesActive?: boolean;
+}
+const { togglesActive } = defineProps<Props>();
 
 type CustomersCategoriesType = {
   title: string;
@@ -103,4 +104,12 @@ const customersCategories: CustomersCategoriesType[] = [
     ],
   },
 ];
+//TODO corregir toggle
+function toggleList(index: number): void {
+  if (togglesActive === true && toggleIndex.value !== index) {
+    toggleIndex.value = index;
+  } else if (toggleIndex.value === index) {
+    toggleIndex.value = 0;
+  }
+}
 </script>

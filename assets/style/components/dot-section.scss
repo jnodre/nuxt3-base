@@ -1,49 +1,49 @@
 .dot-section {
+  position: relative;
   display: flex;
+  flex-direction: column;
   place-content: center;
   place-items: center;
   width: 960px;
   margin: 0 auto;
-  @include u-text-xl2;
-  position: relative;
   margin: 100px auto 210px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
+  @include u-text-xl2;
   @media (--large) {
     width: 800px;
-    margin: 41px auto 80px;
+    margin: 80px auto 130px;
   }
   @media (--tablet) {
     width: 708px;
-    margin: 48px auto 60px;
+    margin: 60px auto 92px;
   }
   @media (--mobile) {
     width: 330px;
     margin: 12px auto 50px;
   }
-  &:after {
+
+  &::after {
+    position: absolute;
     bottom: -60px;
-    content: "";
-    border-radius: 100%;
-    background: var(--pink);
     width: 30px;
     height: 30px;
-    position: absolute;
+    content: "";
+    background: var(--pink);
+    border-radius: 100%;
     @media (--large) {
+      bottom: -50px;
       width: 25px;
       height: 25px;
-      bottom: -50px;
     }
     @media (--tablet) {
+      bottom: -32px;
       width: 20px;
       height: 20px;
-      bottom: -32px;
     }
     @media (--mobile) {
+      bottom: -22px;
       width: 12px;
       height: 12px;
-      bottom: -22px;
     }
   }
 

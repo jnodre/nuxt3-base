@@ -4,7 +4,7 @@
       <span class="media__date">
         {{ media?.date }}
       </span>
-      <div class="media__image" :class="{ 'video__image': video }">
+      <div class="media__image" :class="{ video__image: video }">
         <figure>
           <img
             v-if="media?.image"
