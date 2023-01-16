@@ -18,7 +18,7 @@
     }"
   />
   <ListenSection title="Abiertos a escuchar, compartir, invitar…" />
-  <EventsGrid :events="magazines.data" title="Conectando Audiencias" loadMore />
+  <EventsGrid :events="magazines.data" title="Conectando Audiencias bottom" />
   <EditorialTeam
     title="Consejo editorial"
     description="Profesionales de la gestión cultural de 6 países conforman el equipo editorial de Conectando Audiencias / Connecting Audiences"

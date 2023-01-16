@@ -35,7 +35,7 @@
     </article>
     <div class="customers__bottom" v-if="togglesActive">
       <h3 class="customers__bottom-title">Y muchos más</h3>
-      <nuxt-link class="button button--sm" to="/nuestros-clientes"
+      <nuxt-link class="button button--sm" to="/servicios/nuestros-clientes"
         >Todos los clientes</nuxt-link
       >
     </div>

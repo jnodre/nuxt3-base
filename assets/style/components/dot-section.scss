@@ -58,3 +58,27 @@
     }
   }
 }
+
+.posts-top-section {
+  .dot-section {
+    margin-bottom: 0;
+  }
+
+  .featured-magazine {
+    padding-top: 0;
+    margin-top: 140px;
+    margin-bottom: 200px;
+    @media (--large) {
+      margin-top: 130px;
+      margin-bottom: 150px;
+    }
+    @media (--tablet) {
+      margin-top: 92px;
+      margin-bottom: 100px;
+    }
+    @media (--mobile) {
+      margin-top: 72px;
+      margin-bottom: 60px;
+    }
+  }
+}

@@ -1,20 +1,22 @@
 .media {
   display: flex;
   flex-direction: column;
+
   &--featured {
-    grid-column: 1/-1;
     flex-direction: row;
-    margin: 0 auto;
+    grid-column: 1/-1;
     gap: 40px;
+    margin: 0 auto;
     @media (--mobile) {
       flex-direction: column;
       gap: unset;
       width: 100%;
     }
+
     .media__description {
       display: block;
-      text-align: left;
       width: 400px;
+      text-align: left;
       @media (--large) {
         width: 350px;
       }
@@ -23,6 +25,7 @@
       }
       @media (--mobile) {
         width: unset;
+        margin-bottom: 20px;
       }
     }
 
@@ -38,6 +41,7 @@
         width: 200px;
       }
     }
+
     .video__image {
       width: 800px;
       @media (--large) {
@@ -50,6 +54,7 @@
         width: 200px;
       }
     }
+
     .media__title {
       margin-top: 86px;
       margin-bottom: 10px;
@@ -62,12 +67,13 @@
       }
     }
   }
+
   &__date {
-    font-weight: 600;
-    margin-bottom: 10px;
-    text-align: left;
-    width: 100%;
     display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: left;
     @include u-text-l;
     @media (--large) {
       margin-bottom: 8px;
@@ -76,30 +82,35 @@
       margin-bottom: 5px;
     }
   }
+
   &__description {
     display: none;
 
     @include u-text-l;
   }
+
   &__image {
-    margin: 0 auto;
     width: max-content;
+    margin: 0 auto;
     @media (--mobile) {
       width: 200px;
       margin-bottom: 15px;
     }
   }
+
   &__image-date {
   }
+
   &__information {
     display: flex;
     flex-direction: column;
     height: 100%;
   }
+
   &__title {
+    margin-bottom: 40px;
     font-weight: 600;
     color: var(--purple);
-    margin-bottom: 40px;
     @include u-text-xl;
     @media (--large) {
       margin-bottom: 25px;
@@ -111,12 +122,13 @@
       text-align: left;
     }
   }
+
   .button {
     margin-top: auto;
     @media (--mobile) {
       width: 200px;
-      margin-left: auto;
       margin-right: auto;
+      margin-left: auto;
     }
   }
 }

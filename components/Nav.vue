@@ -12,12 +12,13 @@
           /></nuxt-link>
         </li>
         <li class="nav__element nav__element--right">
-          <nuxt-link class="nav__link" top="/contacto"
+          <nuxt-link class="nav__link" to="/contacto"
             >Agenda una llamada</nuxt-link
           >
-          <nuxt-link class="nav__link nav__link--mobile" to="/contacto"
-            >Agendar llamada</nuxt-link
-          >
+          <nuxt-link
+            class="nav__link nav__link--mobile"
+            to="/contacto"
+          ></nuxt-link>
         </li>
         <li class="nav__element nav__element--right nav__search">
           <button
@@ -105,13 +106,13 @@
               >Experiencia del usuario</nuxt-link
             >
           </li>
-          <li class="modal-menu__sub-element">
+          <!-- <li class="modal-menu__sub-element">
             <nuxt-link
               class="modal-menu__sub-link"
               to="/servicios/training-formacion"
               >Training y Formación</nuxt-link
             >
-          </li>
+          </li> -->
         </ul>
       </li>
       <li class="modal-menu__element">
@@ -134,11 +135,11 @@
         >
       </li>
       <li class="modal-menu__element">
-        <nuxt-link @click.prevent="closeMenu()" to="/contacto"
-          ><span class="modal-menu__text-wrapper"
+        <nuxt-link @click.prevent="closeMenu()" to="/contacto">
+          <span class="modal-menu__text-wrapper"
             >Agenda una llamada / Contacto</span
-          ></nuxt-link
-        >
+          >
+        </nuxt-link>
       </li>
       <li class="modal-menu__element">
         <nuxt-link @click.prevent="closeMenu()" to="/newsletter"

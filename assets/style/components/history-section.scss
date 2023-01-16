@@ -1,3 +1,9 @@
+.history-section-no-padding {
+  .history-section {
+    padding-top: 0;
+  }
+}
+
 .history-section {
   display: flex;
   flex-direction: column;

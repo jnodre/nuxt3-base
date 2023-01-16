@@ -1,10 +1,10 @@
 body {
-  font-family: "Alegreya", serif;
+  font-family: Alegreya, serif;
 }
 
 .page-pink {
-  background: var(--light-pink);
   padding-top: 30px;
+  background: var(--light-pink);
   @media (--large) {
     padding-top: 15px;
   }
@@ -15,18 +15,22 @@ body {
     padding-top: 10px;
   }
 }
+
 .separator {
-  height: 1px;
   width: 1680px;
-  margin: 0 auto;
+  height: 1px;
+  margin: 150px auto;
   background: var(--gray);
   @media (--large) {
     width: 1080px;
+    margin-top: 80px;
   }
   @media (--tablet) {
     width: 708px;
+    margin-top: 70px;
   }
   @media (--mobile) {
     width: 330px;
+    margin-top: 50px;
   }
 }

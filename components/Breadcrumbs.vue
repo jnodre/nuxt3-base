@@ -44,6 +44,6 @@ let routesList = computed<String[]>(() => {
 });
 
 function removeBar(string: String): String {
-  return string.replace("-", " ");
+  return string.replace(/\-/g, " ");
 }
 </script>

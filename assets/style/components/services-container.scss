@@ -89,16 +89,16 @@
     @include u-fix-lh-xd;
   }
 
-  &--dark {
-    color: var(--white);
-    background: var(--purple);
-    border: 1px solid var(--purple);
+  // &--dark {
+  //   color: var(--white);
+  //   background: var(--purple);
+  //   border: 1px solid var(--purple);
 
-    &:hover {
-      color: var(--purple);
-      background: unset;
-    }
-  }
+  //   &:hover {
+  //     color: var(--purple);
+  //     background: unset;
+  //   }
+  // }
 
   &--light {
     padding: 11px 37px 10px;
@@ -231,15 +231,17 @@
 
   &__icon {
     width: 150px;
-    margin: 0 auto;
+    margin: 0 auto 35px;
     @media (--large) {
       width: 120px;
+      margin-bottom: 15px;
     }
     @media (--tablet) {
       width: 100px;
     }
     @media (--mobile) {
       width: 60px;
+      margin-bottom: 8px;
     }
   }
 

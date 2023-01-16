@@ -11,8 +11,7 @@
   <DotSection
     description="ASIMÉTRICA es un equipo de profesionales de la gestión cultural preparado para conocer y ampliar el público de las organizaciones culturales de forma sostenible."
   />
-  <ServicesContainer title="Servicios" />
-  <WorkUs />
+  <ServicesContainer title="Servicios" :services="services" />
   <TestimonialsCarrousel
     title="Clientes y Testimonios"
     description="Asimétrica se siente orgullosa de haber trabajado con decenas de organizaciones culturales en España resto de Europa y América Latina. Esperamos poder darte la bienvenida a nuestra familia de clientes."
@@ -34,17 +33,10 @@
       },
     ]"
   />
-  <Team title="Equipo" :team="teachers.data" />
+  <Team title="Equipo" :team="editors.data" />
   <FeaturedMagazine
     bottom
-    :magazine="{
-      title: 'CA 17 - Escuchando a la audiencia',
-      subtitle: 'Una oportunidad para redefinir nuestro futuro',
-      date: '30.11.2021',
-      description:
-        '<p>Tras 10 años de andadura continuamos con la curiosidad intacta por conocer más sobre la audiencia y los públicos, viviendo la realidad que tenemos delante con la mejor actitud y planteando <strong>escuchar al público como una oportunidad para definir una realidad distinta</strong>. En este número, compartiremos 5 aproximaciones distintas de especial relevancia:</p><ul><li><strong>Chris Unitt</strong> (One Further)</li><li><strong>Chris Unitt</strong> (One Further)</li><li><strong>Chris Unitt</strong> (One Further)</li><li><strong>Chris Unitt</strong> (One Further)</li></ul>',
-      image: { fullUrlThumb: 'https://dummyimage.com/200.jpg' },
-    }"
+    :magazine="magazine"
     title="Leer, ver, escuchar…"
     description="El disfrute del saber"
   />
@@ -59,11 +51,28 @@
 </template>
 <script setup lang="ts">
 import { Testimonials } from "types/testimonial";
+import { Teachers } from "types/teacher";
+import { reactive } from "vue";
+import type { Ref } from "vue";
 
 const { data: testimonials } = useFetch<any>(
   "https://api.asimetrica.abanico.net/api/testimonials"
 );
-const { data: teachers } = useFetch<any>(
-  "https://api.asimetrica.abanico.net/api/teachers"
+
+let magazine = reactive({});
+let editors: Ref<Teachers> = ref([]);
+//TODO añadir tipado de services
+let services: any = ref([]);
+
+useFetch<any>("https://api.asimetrica.abanico.net/api/editorCategories/1").then(
+  (r) => (editors.value = r.data.value.data)
+);
+
+useFetch<any>(
+  "https://api.asimetrica.abanico.net/api/magazines?featured=1"
+).then((r) => (magazine = r.data.value.data));
+
+useFetch<any>("https://api.asimetrica.abanico.net/api/services").then(
+  (r) => (services = r.data.value.data)
 );
 </script>

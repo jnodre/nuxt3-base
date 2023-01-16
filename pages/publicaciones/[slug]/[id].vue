@@ -1,6 +1,6 @@
 <template>
   <div class="page-pink">
-    <Breadcrumbs title="Autor" />
+    <Breadcrumbs id />
     <Teacher />
     <EventsGrid
       :events="events.data"

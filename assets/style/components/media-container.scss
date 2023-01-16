@@ -1,24 +1,21 @@
 .media-container {
   width: 1240px;
   margin: 0 auto;
-  padding: 150px 0 250px;
   text-align: center;
-  border-top: 1px solid var(--gray);
+
   &--videos {
     border: unset;
   }
   @media (--large) {
-    padding: 80px 0 180px;
     width: 1080px;
   }
   @media (--tablet) {
-    padding: 70px 0 150px;
     width: 708px;
   }
   @media (--mobile) {
-    padding: 50px 0 100px;
     width: 330px;
   }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -38,6 +35,7 @@
       gap: 35px;
     }
   }
+
   &__subtitle {
     margin: 25px 0 80px;
     @include u-text-xl;
@@ -51,9 +49,11 @@
       margin: 5px 0 25px;
     }
   }
+
   &__title {
     @include u-text-xl5;
   }
+
   &__bottom {
     width: 700px;
     margin: 0 auto;
@@ -65,16 +65,27 @@
     @media (--mobile) {
       width: 330px;
     }
+
     .button {
-      width: 100%;
-      padding-left: 0;
-      padding-right: 0;
+      padding-right: 38px;
+      padding-left: 38px;
+      @media (--tablet) {
+        padding-right: 70px;
+        padding-left: 70px;
+      }
+
+      @media (--mobile) {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+      }
     }
   }
+
   &__bottom-title {
+    margin: 120px 0 24px;
     font-weight: 600;
     color: var(--purple);
-    margin: 120px 0 24px;
     @include u-text-xl3;
 
     @media (--large) {

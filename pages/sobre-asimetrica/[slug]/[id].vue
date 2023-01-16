@@ -1,12 +1,8 @@
 <template>
   <div class="page-pink">
-    <Breadcrumbs />
+    <Breadcrumbs id />
     <Teacher />
-    <EventsGrid
-      :events="events.data"
-      title="Cursos en los que ha participado"
-      recommended
-    />
+    <EventsGrid :events="events.data" title="Recursos realizados" recommended />
   </div>
   <ProfessionalTeam title="Equipo Asimétrica" button="Conócenos" />
   <WorkUs />

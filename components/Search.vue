@@ -6,9 +6,9 @@
         type="text"
         placeholder="¿Qué estás buscando…?"
       />
-      <button class="search-input__button">
+      <nuxt-link to="/busqueda" class="search-input__button">
         <img src="~/assets/svg/search-white.svg" alt="Buscar" />
-      </button>
+      </nuxt-link>
     </div>
   </div>
 </template>

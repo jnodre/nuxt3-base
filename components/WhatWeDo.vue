@@ -1,4 +1,5 @@
 <template>
+  <!--TODO quitar el servicio de la pagina y que venga de API-->
   <section class="we-do">
     <h2 class="we-do__title">Otras cosas que hacemos</h2>
     <article v-for="(i, index) in list" :key="index" class="we-do__element">

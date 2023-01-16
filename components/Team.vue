@@ -1,5 +1,5 @@
 <template>
-  <section class="team-container" v-if="team">
+  <section class="team-container" v-if="team?.length">
     <h2 class="team-container__title">{{ title }}</h2>
     <h3 v-if="description" class="team-container__description">
       {{ description }}

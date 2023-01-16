@@ -1,7 +1,12 @@
 <template>
-  <section class="featured-magazine">
-    <h2 class="featured-magazine__title">{{ title }}</h2>
-    <h3 class="featured-magazine__description">{{ description }}</h3>
+  <section
+    class="featured-magazine"
+    v-if="magazine && magazine?.title?.length > 0"
+  >
+    <h2 class="featured-magazine__title" v-if="title">{{ title }}</h2>
+    <h3 class="featured-magazine__description" v-if="description">
+      {{ description }}
+    </h3>
     <Magazine full :magazine="magazine" />
     <div class="featured-magazine__bottom" v-if="bottom">
       <h4 class="featured-magazine__bottom-title">¿Con ganas de más?</h4>
@@ -18,7 +23,7 @@ import type { Magazine } from "types/magazine";
 interface Props {
   title?: string;
   description?: string;
-  magazine: Magazine;
+  magazine?: Magazine;
   bottom: boolean;
 }
 

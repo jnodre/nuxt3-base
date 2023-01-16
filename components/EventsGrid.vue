@@ -15,9 +15,11 @@
         :event="event"
       />
     </div>
-    <div class="events-grid__bottom" v-if="recommended && loadMoreIndex < 4">
-      <p class="events-grid__bottom-text">Aún tenemos más</p>
-      <nuxt-link to="" class="button">Ver más talleres</nuxt-link>
+    <div class="events-grid__bottom" v-if="recommended && loadMoreIndex >= 4">
+      <p class="events-grid__bottom-text">Y mucho más</p>
+      <nuxt-link to="/publicaciones/conectando-audiencias" class="button"
+        >Ver más</nuxt-link
+      >
     </div>
     <div
       class="events-grid__bottom"

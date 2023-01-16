@@ -110,7 +110,7 @@ function moveSliderLeft(): void {
       sliderPosition.value +
       sliderWidth!.offsetWidth +
       parseInt(getComputedStyle(slider).gap.replace("px", ""));
-    slider.style.transform = `translateX(${sliderPosition.value}px)`;
+    slider.style.transform = `translateX(${sliderPosition.value - 2}px)`;
     sliderIndex.value--;
   }
 }
@@ -120,7 +120,7 @@ function moveSliderRight(): void {
       sliderPosition.value -
       sliderWidth!.offsetWidth -
       parseInt(getComputedStyle(slider).gap.replace("px", ""));
-    slider.style.transform = `translateX(${sliderPosition.value}px)`;
+    slider.style.transform = `translateX(${sliderPosition.value + -2}px)`;
     sliderIndex.value++;
   }
 }
