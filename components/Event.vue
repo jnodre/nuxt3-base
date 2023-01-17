@@ -16,7 +16,7 @@
     </div>
     <div class="event__information-container">
       <div class="event__date">
-        <span>{{ event.start_date }}</span>
+        <span>{{ event.date }}</span>
       </div>
       <h3 class="event__title">{{ event.title }}</h3>
       <h4 class="event__price">{{ event.price }} €</h4>

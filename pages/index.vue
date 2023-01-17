@@ -33,7 +33,7 @@
       },
     ]"
   />
-  <Team title="Equipo" :team="editors.data" />
+  <Team title="Equipo" :team="editors.editors" />
   <FeaturedMagazine
     bottom
     :magazine="magazine"

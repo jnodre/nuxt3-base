@@ -1,0 +1,108 @@
+.magazine-grid {
+  width: 1680px;
+  padding-top: 150px;
+  margin: 0 auto;
+  @media (--large) {
+    width: 1180px;
+    padding-top: 120px;
+  }
+  @media (--tablet) {
+    width: 708px;
+    padding-top: 100px;
+  }
+  @media (--mobile) {
+    width: 330px;
+    padding-top: 50px;
+  }
+
+  &--recommended {
+    padding-bottom: 120px;
+
+    .magazine-grid__title {
+      font-weight: 600;
+      color: var(--purple);
+      @include u-text-xl3;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 100px;
+    column-gap: 80px;
+    margin-top: 80px;
+
+    @media (--large) {
+      row-gap: 70px;
+      column-gap: 100px;
+      margin-top: 50px;
+    }
+    @media (--tablet) {
+      row-gap: 50px;
+      column-gap: 60px;
+      margin-top: 40px;
+    }
+    @media (--mobile) {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin-top: 25px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    @include u-text-xl4;
+  }
+
+  &__subtitle {
+    margin-top: 25px;
+    text-align: center;
+    @include u-text-xl;
+    @media (--large) {
+      margin-top: 15px;
+    }
+    @media (--tablet) {
+      margin-top: 10px;
+    }
+    @media (--large) {
+      margin-top: 5px;
+    }
+  }
+
+  &__bottom {
+    width: 700px;
+    margin: 120px auto 0;
+    text-align: center;
+    @media (--large) {
+      margin: 100px auto 0;
+    }
+    @media (--tablet) {
+      width: 708px;
+      margin: 90px auto 0;
+    }
+    @media (--mobile) {
+      width: 330px;
+      margin: 60px auto 0;
+
+      .button {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__bottom-text {
+    margin-bottom: 24px;
+    font-weight: bold;
+    color: var(--purple);
+    @include u-text-xl3;
+    @media (--large) {
+      margin-bottom: 20px;
+    }
+    @media (--mobile) {
+      margin-bottom: 15px;
+    }
+  }
+}

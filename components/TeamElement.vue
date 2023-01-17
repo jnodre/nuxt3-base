@@ -1,5 +1,5 @@
 <template>
-  <article class="team-element">
+  <article class="team-element" v-if="element">
     <figure class="team-element__image-container">
       <img
         class="team-element__image"
@@ -14,14 +14,22 @@
         alt="imagen de prueba"
       />
     </figure>
-    <h4 class="team-element__name">Nombre Apellid</h4>
-    <h5 class="team-element__job">Cargo dentro del curso</h5>
-    <p class="team-element__organization">Organización</p>
+    <h4 class="team-element__name" v-if="element.name">{{ element.name }}</h4>
+    <h5 class="team-element__job" v-if="element.job">{{ element.job }}</h5>
+    <p class="team-element__organization" v-if="element.company">
+      {{ company }}
+    </p>
     <div class="team-element__social-container">
-      <a class="team-element__social-link" href=""
+      <a
+        class="team-element__social-link"
+        :href="element.linkedin"
+        v-if="element.linkedin"
         ><img src="~/assets/svg/linkedin.svg" alt=""
       /></a>
-      <a class="team-element__social-link" href=""
+      <a
+        class="team-element__social-link"
+        v-if="element.twitter"
+        :href="element.twitter"
         ><img src="~/assets/svg/twitter.svg" alt=""
       /></a>
     </div>
@@ -31,7 +39,8 @@
 import type { Teacher } from "types/teacher";
 interface Props {
   element?: Teacher;
+  company?: string;
 }
 
-const { element } = defineProps<Props>();
+const { element, company } = defineProps<Props>();
 </script>

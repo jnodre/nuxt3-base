@@ -15,9 +15,9 @@
       </figure>
     </div>
     <div class="magazine__information-container">
-      <h3 class="magazine__title">{{ magazine.title }}</h3>
-      <h4 class="magazine__subtitle">{{ magazine.subtitle }}</h4>
-      <div class="magazine__description" v-html="magazine.description"></div>
+      <h2 class="magazine__title">{{ magazine.title }}</h2>
+      <h3 class="magazine__subtitle">{{ magazine.subtitle }}</h3>
+      <div class="magazine__description" v-html="magazine.entry"></div>
       <!--TODO colocar slug-id en enlace cuando venga de API-->
       <nuxt-link
         v-if="full"

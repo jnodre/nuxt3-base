@@ -41,4 +41,15 @@ export default defineNuxtConfig({
   htmlValidator: {
     usePrettier: true,
   },
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: "es",
+      },
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1",
+      title: "My App",
+      meta: [{ hid: "description", name: "description", content: "" }],
+    },
+  },
 });

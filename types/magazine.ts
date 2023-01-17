@@ -11,3 +11,4 @@ export interface Magazine {
     fullUrlThumb: string;
   };
 }
+export interface Magazines extends Array<Magazine> {}

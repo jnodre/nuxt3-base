@@ -8,7 +8,10 @@
             @click.prevent="closeMenu()"
             to="/"
             aria-label="Enlace a la home"
-            ><img class="nav__logo" src="/images/logo.png" alt=""
+            ><img
+              class="nav__logo"
+              src="/images/logo.png"
+              alt="Logo de Asimétrica"
           /></nuxt-link>
         </li>
         <li class="nav__element nav__element--right">
@@ -16,12 +19,14 @@
             >Agenda una llamada</nuxt-link
           >
           <nuxt-link
+            aria-label="Agenda una llamada / Contacto"
             class="nav__link nav__link--mobile"
             to="/contacto"
           ></nuxt-link>
         </li>
         <li class="nav__element nav__element--right nav__search">
           <button
+            type="button"
             @click="toggleSearch"
             aria-label="Buscar"
             aria-controls="modal-search"
@@ -36,6 +41,7 @@
         </li>
         <li class="nav__element nav__element--right">
           <button
+            type="button"
             class="nav__menu"
             aria-controls="modal-menu"
             aria-expanded="false"

@@ -1,15 +1,15 @@
 export interface Teacher {
   id: number;
-  name: String;
-  job: String;
-  company: String;
-  linkedin: String;
-  twitter: String;
+  name: string;
+  job: string;
+  company: string;
+  linkedin: string;
+  twitter: string;
   position: number;
-  created_at: String;
-  updated_at: String;
-  job_es: String;
-  job_en: String;
+  created_at: string;
+  updated_at: string;
+  job_es: string;
+  job_en: string;
   image: Object;
 }
 export interface Teachers extends Array<Teacher> {}

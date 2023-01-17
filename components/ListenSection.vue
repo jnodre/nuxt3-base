@@ -14,7 +14,7 @@
             alt="testimonial.name"
           />
           <h2 class="listen__title">{{ testimonial.name }}</h2>
-          <h3 class="listen__subtitle">
+          <h3 class="listen__subtitle" v-if="testimonial.company">
             {{ testimonial.company }}
           </h3>
           <p class="listen__description" v-html="testimonial.description"></p>

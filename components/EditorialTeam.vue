@@ -1,30 +1,23 @@
 <template>
-  <section class="editorial-team" v-if="editors">
+  <section class="editorial-team" v-if="editorCategories">
     <h2 class="editorial-team__title">{{ title }}</h2>
     <h3 v-if="description" class="editorial-team__description">
       {{ description }}
     </h3>
-    <div class="editorial-team__category">
+    <div
+      class="editorial-team__category"
+      v-for="(i, index) in editorCategories"
+      :key="index"
+    >
       <h4 class="editorial-team__category-title">
-        Conectando Audiencias España - <span>Asimétrica</span>
+        {{ i.title }}
       </h4>
       <div class="editorial-team__grid">
         <TeamElement
-          v-for="(teacher, index) in editors"
+          v-for="(editor, index) in i.editors"
           :key="index"
-          :element="teacher"
-        />
-      </div>
-    </div>
-    <div class="editorial-team__category">
-      <h4 class="editorial-team__category-title">
-        Conectando Audiencias España - <span>Asimétrica</span>
-      </h4>
-      <div class="editorial-team__grid">
-        <TeamElement
-          v-for="(teacher, index) in editors"
-          :key="index"
-          :element="teacher"
+          :element="editor"
+          :company="i.title"
         />
       </div>
     </div>
@@ -35,8 +28,8 @@ import { Teachers } from "types/teacher";
 interface Props {
   title?: string;
   description?: string;
-  editors?: Teachers;
+  editorCategories?: any;
 }
 
-const { editors, title, description } = defineProps<Props>();
+const { title, description, editorCategories } = defineProps<Props>();
 </script>

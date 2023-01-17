@@ -34,3 +34,56 @@ body {
     margin-top: 50px;
   }
 }
+
+.magazine-grid-team-container {
+  .magazine-grid {
+    padding-bottom: 150px;
+    @media (--large) {
+      padding-bottom: 120px;
+    }
+    @media (--tablet) {
+      padding-bottom: 100px;
+    }
+    @media (--mobile) {
+      padding-bottom: 60px;
+    }
+  }
+}
+
+.page-section-container {
+  margin-bottom: 10px;
+}
+
+.page-text-dot-magazine-container {
+  .dot-section {
+    margin-bottom: 160px;
+    @media (--large) {
+      margin-bottom: 130px;
+    }
+    @media (--tablet) {
+      margin-bottom: 60px;
+    }
+    @media (--mobile) {
+      margin-bottom: 72px;
+    }
+  }
+
+  .page-text {
+    margin: 0 auto;
+  }
+
+  .featured-magazine {
+    padding-top: 80px;
+    padding-bottom: 150px;
+    @media (--large) {
+      padding-bottom: 130px;
+    }
+    @media (--tablet) {
+      padding-bottom: 100px;
+    }
+    @media (--mobile) {
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+  }
+}
