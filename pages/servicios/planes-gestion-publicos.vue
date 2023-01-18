@@ -4,9 +4,11 @@
     :image="{ url: '/images/header-borrar.jpg' }"
   />
   <Breadcrumbs />
-  <DotSection
-    description="Un marco estratégico en el campo de la gestión de públicos para organizaciones culturales"
-  />
+  <div class="service-dot-section-container">
+    <DotSection
+      description="Un marco estratégico en el campo de la gestión de públicos para organizaciones culturales"
+    />
+  </div>
   <section class="page-section-container">
     <PageText
       title="Investigación de público"

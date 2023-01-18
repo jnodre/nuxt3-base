@@ -4,9 +4,11 @@
     :image="{ url: '/images/header-borrar.jpg' }"
   />
   <Breadcrumbs />
-  <DotSection
-    description="Un conjunto avanzado de metodologías de investigación y análisis del público reconocidas internacionalmente"
-  />
+  <div class="service-dot-section-container">
+    <DotSection
+      description="Un conjunto avanzado de metodologías de investigación y análisis del público reconocidas internacionalmente"
+    />
+  </div>
   <section class="page-section-container">
     <PageText
       title="Investigación de público"

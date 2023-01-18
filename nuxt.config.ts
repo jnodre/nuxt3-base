@@ -3,6 +3,11 @@ function per(target: number, context: number) {
 }
 
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      apiUrl: "https://api.asimetrica.abanico.net",
+    },
+  },
   css: ["@/assets/style/imports.scss"],
   postcss: {
     plugins: {
@@ -18,15 +23,18 @@ export default defineNuxtConfig({
     },
   },
   modules: ["@nuxt/image-edge", "@nuxtjs/html-validator"],
-  // typescript: {
-  //   typeCheck: {
-  //     eslint: {
-  //       files: "./**/*.{ts,js,vue}",
-  //     },
-  //   },
-  // },
+  vite: {
+    server: {
+      proxy: {
+        "/api": {
+          target: "https://api.asimetrica.abanico.net",
+          changeOrigin: true,
+          // rewrite: (path) => path.replace(/^\/api/, ""),
+        },
+      },
+    },
+  },
   image: {
-    // The screen sizes predefined by `@nuxt/image`:
     screens: {
       xs: 320,
       sm: 640,

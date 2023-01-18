@@ -4,9 +4,11 @@
     :image="{ url: '/images/header-borrar.jpg' }"
   />
   <Breadcrumbs />
-  <DotSection
-    description="Eficiencia, orden y resultados para mantener a todos los públicos"
-  />
+  <div class="service-dot-section-container">
+    <DotSection
+      description="Eficiencia, orden y resultados para mantener a todos los públicos"
+    />
+  </div>
   <section class="page-section-container">
     <PageText
       title="Investigación de público"

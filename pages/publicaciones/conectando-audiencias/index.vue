@@ -34,7 +34,7 @@
 </template>
 <script setup lang="ts">
 import { Testimonials } from "types/testimonial";
-
+// const config = useRuntimeConfig();
 let editorCategories: any = ref([]);
 let magazines: any = ref([]);
 
@@ -42,7 +42,5 @@ useFetch<any>("https://api.asimetrica.abanico.net/api/editorCategories").then(
   (r) => (editorCategories.value = r.data.value.data)
 );
 
-useFetch<any>("https://api.asimetrica.abanico.net/api/magazines").then(
-  (r) => (magazines.value = r.data.value.data)
-);
+useFetch<any>(`/api/magazines`).then((r) => console.log(r));
 </script>

@@ -1,11 +1,12 @@
 <template>
   <section class="customers">
+    <!-- TODO revisar -->
     <h2 class="customers__description" v-if="togglesActive">
       A continuación, puedes ver el listado de clientes de Asimétrica:
     </h2>
     <article
       class="customers__category"
-      v-for="(i, index) in customersCategories"
+      v-for="(i, index) in customerCategories"
       :key="index"
       @click="toggleList(index)"
     >
@@ -44,67 +45,12 @@
 <script lang="ts" setup>
 interface Props {
   togglesActive?: boolean;
+  customerCategories?: any;
 }
 const { togglesActive } = defineProps<Props>();
 
-type CustomersCategoriesType = {
-  title: string;
-  customers: {
-    title: string;
-    url: string;
-  }[];
-};
-
 let toggleIndex = ref(0);
 
-const customersCategories: CustomersCategoriesType[] = [
-  {
-    title: "Orquestas y Música Clásica",
-    customers: [
-      {
-        title:
-          "Laboratorio Permanente de Publico de Museos, Ministerio de Cultura",
-        url: "",
-      },
-      {
-        title:
-          "Laboratorio Permanente de Publico de Museos, Ministerio de Cultura",
-        url: "",
-      },
-    ],
-  },
-  {
-    title: "Orquestas y Música Clásica",
-    customers: [
-      {
-        title:
-          "Laboratorio Permanente de Publico de Museos, Ministerio de Cultura",
-        url: "",
-      },
-    ],
-  },
-  {
-    title: "Orquestas y Música Clásica",
-    customers: [
-      {
-        title:
-          "Laboratorio Permanente de Publico de Museos, Ministerio de Cultura",
-        url: "",
-      },
-    ],
-  },
-  {
-    title: "Orquestas y Música Clásica",
-    customers: [
-      {
-        title:
-          "Laboratorio Permanente de Publico de Museos, Ministerio de Cultura",
-        url: "",
-      },
-    ],
-  },
-];
-//TODO corregir toggle
 function toggleList(index: number): void {
   if (togglesActive === true && toggleIndex.value !== index) {
     toggleIndex.value = index;

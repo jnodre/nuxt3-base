@@ -87,7 +87,7 @@
           <li class="modal-menu__sub-element">
             <nuxt-link
               class="modal-menu__sub-link"
-              to="/servicios/investigacion-analisis-publico"
+              to="/servicios/investigacion-de-publico"
               >Investigación y análisis del público</nuxt-link
             >
           </li>

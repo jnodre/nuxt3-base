@@ -4,9 +4,11 @@
     :image="{ url: '/images/header-borrar.jpg' }"
   />
   <Breadcrumbs />
-  <DotSection
-    description="Cada contacto con los usuarios es una oportunidad para mejorar su experiencia"
-  />
+  <div class="service-dot-section-container">
+    <DotSection
+      description="Cada contacto con los usuarios es una oportunidad para mejorar su experiencia"
+    />
+  </div>
   <section class="page-section-container">
     <PageText
       title="Investigación de público"

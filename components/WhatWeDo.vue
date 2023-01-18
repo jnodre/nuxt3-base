@@ -7,7 +7,7 @@
       <h3 class="we-do__element-title">{{ i.title }}</h3>
       <nuxt-link
         :to="`/servicios/${i.link}`"
-        class="we-do__link button button-sm"
+        class="we-do__link button button-sm button--light"
         >Saber más</nuxt-link
       >
     </article>
